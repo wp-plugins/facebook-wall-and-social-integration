@@ -1,4 +1,4 @@
-=== Custom Facebook Feed ===
+=== Facebook wall and social integration ===
 Contributors: mitsol
 Tags: facebook, feed, events, shortcode, social, status, posts, facebook wall
 Requires at least: 3.1
