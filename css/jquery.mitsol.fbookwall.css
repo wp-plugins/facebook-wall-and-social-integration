@@ -1,0 +1,128 @@
+
+#msfbmain-div .msfb-wall
+{
+	font-family: "lucida grande",tahoma,arial,verdana,sans-serif !important;
+	font-size:13px !important;
+	font-weight: normal !important;
+	padding:5px;	
+	line-height:1.2em;
+	color:#333333;	
+	overflow-x:none;	
+}
+	
+#msfbmain-div .msfb-wall a{
+	color:#3B5998;
+	text-decoration:none !important;
+	}
+	
+#msfbmain-div .msfb-wall a:hover{
+	text-decoration:underline; background-color: transparent !important; color: navy !important; 
+}	
+#msfbmain-div .msfb-wall.loading
+{
+	height:300px;
+	background:url(../images/loadersmall.gif) no-repeat center center;
+}
+
+#msfbmain-div .msfb-wall-box{
+	margin-bottom:10px;
+	border-top:1px solid #eee;
+	padding-top:10px;}
+	
+#msfbmain-div .msfb-wall-box-first{
+	border:0;
+	padding-top:0;}
+	
+#msfbmain-div .msfb-wall-avatar{
+	float:left;
+	border:0;}
+	
+#msfbmain-div .msfb-wall-data{
+	margin-left:60px;}
+	
+#msfbmain-div .msfb-wall-border-left{
+	border-left:2px solid #CCCCCC;
+	padding:0 0 3px 8px;}	
+	
+#msfbmain-div .msfb-wall-icon
+{
+	float:left;
+	margin-right:5px;
+}
+#msfbmain-div .msfb-wall-date
+{
+	font-size:11px;
+	color:#777;
+	clear:left;
+	display:block;
+	margin-bottom:5px;
+}	
+#msfbmain-div .msfb-wall-message{
+	display:block;
+	margin-bottom:5px;
+}
+	
+#msfbmain-div .msfb-wall-message-from{
+	font-weight:bold;
+	color:#3B5998;}
+	
+#msfbmain-div .msfb-wall-link{
+	color:#333;
+	font-size:11px;
+	text-decoration:none;}
+
+/* Likes section */
+
+#msfbmain-div .msfb-wall-likes
+{
+	border-bottom:1px solid #E5EAF1;
+	margin-bottom:2px;
+	display:block;
+	font-size:11px;
+    background:#FFF;
+	/*padding-top:5px;*/
+}
+	
+#msfbmain-div .msfb-wall-likes div
+{
+	margin:0;
+	background:#EDEFF4;
+	padding:5px 5px 4px 7px;
+	font-weight: normal;
+}
+	
+#msfbmain-div .msfb-wall-likes div span
+{
+	color:#3B5998;
+}
+		
+/* Clearing fix*/
+		
+#msfbmain-div .msfb-wall:after, #msfbmain-div .msfb-wall-media:after, #msfbmain-div .msfb-wall-clean{
+content:'.';
+display:block;
+height:0;
+clear:both;
+visibility:hidden;
+font-size:0;
+line-height:0;}		
+		
+#msfbmain-div {
+    background: white;
+    /*border-radius: 4px 4px 4px 4px;*/
+	padding:0px;
+    display:block;
+    text-align: left;	
+}			
+
+#msfbmain-div .msfb-layout {
+background: transparent;
+/*border: 1px solid #F0F0F0;*/ /*setting*/
+margin: 0 8px 8px;
+overflow: hidden;
+padding: 5px;
+width: auto;
+}
+#msfbmain-div .msfb-layout .avatar{
+	float: left;
+}
