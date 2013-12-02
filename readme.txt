@@ -35,10 +35,13 @@ To display photo post, video post, link post, event post, the number of likes, a
 3. Navigate to the 'Facebook wall & social integration' settings page to configure your feed.
 4. Use the shortcode `[mitsol_fbwall_feed_short_code]` in your page, post or widget to display your feed.
 5. You can display feeds of different Facebook groups/pages by specifying a Page/group ID directly in the shortcode: `[mitsol_fbwall_feed_short_code id=wordpress num=20]`.
+6. if there is any confusion in running/installing the plugin, contact immediately and view doc, problems will be solved
 
 == Frequently Asked Questions ==
 
-For a full documentation with FAQs and help with troubleshooting please visit the **[Documentation and FAQs](http://extensions.programminghelp24.com/facebook_wall_documentation_wordpress.htm)** section of the mitsol extensions website
+For a full documentation with FAQs and help with troubleshooting please visit the **[Documentation and FAQs](http://extensions.programminghelp24.com/facebook_wall_documentation_wordpress.htm)** section of the mitsol extensions website 
+
+Furhermore, if there is any confusion in running the plugin, contact immediately and view doc, problems will be solved
 
 = How do I find the ID of my Facebook page or group or profile? =
 
