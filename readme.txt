@@ -1,6 +1,6 @@
 === Facebook wall and social integration ===
 Contributors: mitsol
-Tags: facebook, feed, events, shortcode, social, status, posts, facebook wall
+Tags: facebook, feed, events, shortcode, social, status, posts, facebook wall, plugin
 Requires at least: 3.1
 Tested up to: 3.7.1
 Stable tag: 1.0
