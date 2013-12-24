@@ -26,7 +26,7 @@ Facebook wall and social integration shows **facebook feed/wall posts of page/pr
 * It's responsive and adjusts within the width of container
 * others
 
-To display photo post, video post, link post, event post, the number of likes, all comments by paging for each Facebook post, header bar and like button at top, language settings, scrolling plugin and more then [upgrade to the Pro version](http://extensions.programminghelp24.com/wordpress/facebook-wall-pro "facebook wall pro"). Try out the [Pro demo](http://wordpress.programminghelp24.com/facebook-wall-pro/ "facebook wall Demo").
+To display photo post, video post, link post, event post, the number of likes, all comments by paging for each Facebook post, header bar and like button at top, language settings, scrolling plugin, responsiveness and more then [upgrade to the Pro version](http://extensions.programminghelp24.com/wordpress/facebook-wall-pro "facebook wall pro"). Try out the [Pro demo](http://wordpress.programminghelp24.com/facebook-wall-pro/ "facebook wall Demo").
 
 == Installation ==
 
@@ -59,7 +59,7 @@ At first, check that your group/page is public and not a private group/page.
 Also, make sure to check the 'Show guest entries' option in the settings page.Furthermore, increase the  **Show number of posts** value from settings becuase 
 non-pro version only shows status/textual posts of page/group/profile so there may not be status posts in the number of posts value specified.
 
-= Can I show photos and videos in my Custom Facebook feed? =
+= Can I show photos and videos in my Facebook feed? =
 
 This free plugin only allows you to display textual updates from your Facebook feed. To display photos,videos,formatted links in your feed you need to upgrade to the Pro version of the plugin. View demo of the Pro version on the [mitsol wp demo website](http://wordpress.programminghelp24.com/facebook-wall-pro/ "facebook wall feed Demo"), and find out more about Pro version [here](http://extensions.programminghelp24.com/wordpress/facebook-wall-pro "Facebook Wall Feed Pro").
 
