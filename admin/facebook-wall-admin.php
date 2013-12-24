@@ -289,9 +289,9 @@ To override common settings include parameters as follows - <strong>[mitsol_fbwa
 <div class="row-fluid"> 
 
 <div class="well">
-<a class="btn btn-info" target="_blank" style="font-weight:bold;" href="http://extensions.programminghelp24.com/wordpress/facebook-wall-pro">Click to Buy pro version now for a complete feed display for your business/personal website</a><br/><br/>
+<a class="btn btn-info" target="_blank" style="font-weight:bold;" href="http://extensions.programminghelp24.com/wordpress/facebook-wall-pro">Click to Buy pro version now for a complete feed display for your website</a><br/><br/>
 1.<strong>Display photo, video, links, event posts effectively, currently free version only shows textual/status posts</strong><br/><br/>
-2.Get more features and settings for header display, like button display, number of likes, all comments with paging, more color options,nice scrolling, others<br/><br/>
+2.Get more features and settings for header display, like button display, number of likes, all comments with paging, more color options,nice scrolling,responsiveness others<br/><br/>
 3.Add popular facebook plugins - like button, comments, follow button anywhere in the pages, posts using short codes<br/><br/>
 
 <strong>View pro version demo for all the features here - <a class="btn btn-info" target="_blank" href="http://wordpress.programminghelp24.com/facebook-wall-pro/">Pro Demo</a></strong>
