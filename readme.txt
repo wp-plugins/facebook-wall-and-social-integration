@@ -26,7 +26,7 @@ Facebook wall and social integration shows **facebook feed/wall posts of page/pr
 * It's responsive and adjusts within the width of container
 * others
 
-To display photo post, video post, link post, event post, the number of likes, all comments by paging for each Facebook post, header bar and like button at top, language settings, scrolling plugin, responsiveness and more then [upgrade to the Pro version](http://extensions.programminghelp24.com/wordpress/facebook-wall-pro "facebook wall pro"). Try out the [Pro demo](http://wordpress.programminghelp24.com/facebook-wall-pro/ "facebook wall Demo").
+To display photo post, video post, link post, event post, the number of likes, all comments by paging for each Facebook post, header bar and like button at top, language settings, scrolling plugin,responsiveness and more then [upgrade to the Pro version](http://extensions.programminghelp24.com/wordpress/facebook-wall-pro "facebook wall pro"). Try out the [Pro demo](http://wordpress.programminghelp24.com/facebook-wall-pro/ "facebook wall Demo").
 
 == Installation ==
 
