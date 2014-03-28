@@ -2,9 +2,9 @@
 /*
 Plugin Name: facebook wall and social integration
 Plugin URI: http://extensions.programminghelp24.com/wordpress/facebook-wall-pro/
-Description: show facebook feed of page/group/profile and social integration  by mitsol
+Description: show facebook feed of page/group/profile and social integration  by mitsol(free version)
 Author: mitsol	
-Version: 1.0
+Version: 1.1
 Author URI: http://extensions.programminghelp24.com/ 
 License: GPLv2 or later 
 */ 
