@@ -28,11 +28,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 include_once dirname(__FILE__) . '/facebook-wall-and-social-integration-functions.php';
 include_once dirname(__FILE__) . '/admin/facebook-wall-admin.php';
 
-function facebook_wall_and_social_integration_activation() {
-}
 register_activation_hook(__FILE__, 'facebook_wall_and_social_integration_activation'); // code to be run after activate of plugin
-function facebook_wall_and_social_integration_deactivation() {
-}
 register_deactivation_hook(__FILE__, 'facebook_wall_and_social_integration_deactivation'); 
 
 add_action('wp_enqueue_scripts', 'facebook_wall_and_social_integration_scripts'); //add scriptss
