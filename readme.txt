@@ -1,9 +1,9 @@
 === Facebook wall and social integration ===
 Contributors: mitsol
-Tags: facebook, feed, events, shortcode, social, status, posts, facebook wall, plugin 
+Tags: facebook, feed, events, shortcode, social, status, posts, facebook wall, plugin
 Requires at least: 3.1
 Tested up to: 3.8.1
-Stable tag: 1.0 
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -23,10 +23,11 @@ Facebook wall and social integration shows **facebook feed/wall posts of page/pr
 * Cool editable css and loads fast
 * Use the shortcode options to set page/group id and number of posts
 * Select from date formats to display date your own way
+* multiple feed display per page
 * It's responsive and adjusts within the width of container
 * others
 
-To display photo post, video post, link post, event post, the number of likes, all comments by paging for each Facebook post, header bar and like button at top, language settings, scrolling plugin,responsiveness and more then [upgrade to the Pro version](http://extensions.programminghelp24.com/wordpress/facebook-wall-pro "facebook wall pro"). Try out the [Pro demo](http://wordpress.programminghelp24.com/facebook-wall-pro/ "facebook wall Demo").
+To display photo post, video post, link post, event post, choose type of posts, different picture sizes, the number of likes, all comments by paging for each Facebook post, header bar and like button at top, language settings, scrolling plugin,responsiveness and more then [upgrade to the Pro version](http://extensions.programminghelp24.com/wordpress/facebook-wall-pro "facebook wall pro"). Try out the [Pro demo](http://wordpress.programminghelp24.com/facebook-wall-pro/ "facebook wall Demo").
 
 == Installation ==
 
@@ -63,6 +64,10 @@ non-pro version only shows status/textual posts of page/group/profile so there m
 
 This free plugin only allows you to display textual updates from your Facebook feed. To display photos,videos,formatted links in your feed you need to upgrade to the Pro version of the plugin. View demo of the Pro version on the [mitsol wp demo website](http://wordpress.programminghelp24.com/facebook-wall-pro/ "facebook wall feed Demo"), and find out more about Pro version [here](http://extensions.programminghelp24.com/wordpress/facebook-wall-pro "Facebook Wall Feed Pro").
 
+= Can I choose to show certain types of posts? =
+
+Yes you can choose type of posts to display.For this feature please upgrade to the [Pro version of the plugin](http://extensions.programminghelp24.com/wordpress/facebook-wall-pro "Facebook Wall Feed Pro").
+
 = Can I show the comments associated with each Facebook post? =
 
 For this feature please upgrade to the [Pro version of the plugin](http://extensions.programminghelp24.com/wordpress/facebook-wall-pro "Facebook Wall Feed Pro").
@@ -81,3 +86,5 @@ You can embed your Facebook feed directly into a template file by using the Word
 
 = 1.0 =
 * Launch!
+= 1.1 =
+* Plugin is now uses server side call to show feed as many users requested to have non-expired access token and others. Some new features like choosing post types, defining different picture sizes...
