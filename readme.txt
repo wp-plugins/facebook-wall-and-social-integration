@@ -27,7 +27,7 @@ Facebook wall and social integration shows **facebook feed/wall posts of page/pr
 * It's responsive and adjusts within the width of container
 * others
 
-To display photo post, video post, link post, event post, choose type of posts, different picture sizes, the number of likes, all comments by paging for each Facebook post, header bar and like button at top, language settings, scrolling plugin,responsiveness and more then [upgrade to the Pro version](http://extensions.programminghelp24.com/wordpress/facebook-wall-pro "facebook wall pro"). Try out the [Pro demo](http://wordpress.programminghelp24.com/facebook-wall-pro/ "facebook wall Demo").
+To display photo post, video post, link post, event post, choose type of posts, different picture sizes, the number of likes, all comments by paging for each Facebook post, header bar and like button at top, language settings, scrolling plugin,responsiveness and more then [upgrade to the Pro version](http://extensions.techhelpsource.com/wordpress/facebook-wall-pro "facebook wall pro"). Try out the [Pro demo](http://wordpress.techhelpsource.com/facebook-wall-pro/ "facebook wall Demo").
 
 == Installation ==
 
@@ -40,7 +40,7 @@ To display photo post, video post, link post, event post, choose type of posts, 
 
 == Frequently Asked Questions ==
 
-For a full documentation with FAQs and help with troubleshooting please visit the **[Documentation and FAQs](http://extensions.programminghelp24.com/facebook_wall_documentation_wordpress.htm)** section of the mitsol extensions website 
+For a full documentation with FAQs and help with troubleshooting please visit the **[Documentation and FAQs](http://extensions.techhelpsource.com/facebook_wall_documentation_wordpress.htm)** section of the mitsol extensions website 
 
 Furhermore, if there is any confusion in running the plugin, contact immediately and view doc, problems will be solved
 
@@ -52,7 +52,7 @@ If you have a Facebook **group/profile** then use [this tool](http://lookup-id.c
 
 = What is Access Token and how to get it? =
 
-Access Token is required by Facebook in order to access their feeds. It's easy to get one.  Just follow the step-by-step instructions [here in the doc](http://extensions.programminghelp24.com/facebook_wall_documentation_wordpress.htm "Getting an Access Token"). 
+Access Token is required by Facebook in order to access their feeds. It's easy to get one.  Just follow the step-by-step instructions [here in the doc](http://extensions.techhelpsource.com/facebook_wall_documentation_wordpress.htm "Getting an Access Token"). 
 
 = Why isn't the feed from my group/page displaying? =
 
@@ -62,15 +62,15 @@ non-pro version only shows status/textual posts of page/group/profile so there m
 
 = Can I show photos and videos in my Facebook feed? =
 
-This free plugin only allows you to display textual updates from your Facebook feed. To display photos,videos,formatted links in your feed you need to upgrade to the Pro version of the plugin. View demo of the Pro version on the [mitsol wp demo website](http://wordpress.programminghelp24.com/facebook-wall-pro/ "facebook wall feed Demo"), and find out more about Pro version [here](http://extensions.programminghelp24.com/wordpress/facebook-wall-pro "Facebook Wall Feed Pro").
+This free plugin only allows you to display textual updates from your Facebook feed. To display photos,videos,formatted links in your feed you need to upgrade to the Pro version of the plugin. View demo of the Pro version on the [mitsol wp demo website](http://wordpress.techhelpsource.com/facebook-wall-pro/ "facebook wall feed Demo"), and find out more about Pro version [here](http://extensions.techhelpsource.com/wordpress/facebook-wall-pro "Facebook Wall Feed Pro").
 
 = Can I choose to show certain types of posts? =
 
-Yes you can choose type of posts to display.For this feature please upgrade to the [Pro version of the plugin](http://extensions.programminghelp24.com/wordpress/facebook-wall-pro "Facebook Wall Feed Pro").
+Yes you can choose type of posts to display.For this feature please upgrade to the [Pro version of the plugin](http://extensions.techhelpsource.com/wordpress/facebook-wall-pro "Facebook Wall Feed Pro").
 
 = Can I show the comments associated with each Facebook post? =
 
-For this feature please upgrade to the [Pro version of the plugin](http://extensions.programminghelp24.com/wordpress/facebook-wall-pro "Facebook Wall Feed Pro").
+For this feature please upgrade to the [Pro version of the plugin](http://extensions.techhelpsource.com/wordpress/facebook-wall-pro "Facebook Wall Feed Pro").
 
 = How do I embed the Custom Facebook Feed directly into a WordPress page template? =
 
