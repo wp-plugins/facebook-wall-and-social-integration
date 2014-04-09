@@ -196,7 +196,7 @@ input[type="color"],.msmain_container
             <label class="control-label" for="msfb_fbid">Facebook ID</label>  
             <div class="controls">  
 			<input type="text" class="input-xlarge" name="msfb_fbid" value="<?php echo esc_attr_e($msfb_fbid); ?>" id="msfb_fbid" />
-			<p class="help-block"><a target="_blank" href="http://extensions.programminghelp24.com/facebook_wall_documentation_wordpress.htm">read doc</a> or <a target="_blank" href="http://wordpress.org/plugins/facebook-wall-and-social-integration/faq/">plugin faq</a> to get facebook page/group/profile id</p> 
+			<p class="help-block"><a target="_blank" href="http://extensions.techhelpsource.com/facebook_wall_documentation_wordpress.htm">read doc</a> or <a target="_blank" href="http://wordpress.org/plugins/facebook-wall-and-social-integration/faq/">plugin faq</a> to get facebook page/group/profile id</p> 
             </div>  
           </div>  
 		  <div class="control-group">  
@@ -204,7 +204,7 @@ input[type="color"],.msmain_container
             <div class="controls">  
 			<input type="text" class="input-xlarge" name="msfb_accesstoken" value="<?php echo esc_attr_e($msfb_accesstoken); ?>" id="msfb_accesstoken" />
                <p class="help-block">it will be look like <b>123456789|23242hj323232jh3j2222fs45</b> (for this create facebook<br/>
-               application first and configure application basic setting correctly, written in the <a target="_blank" href="http://extensions.programminghelp24.com/facebook_wall_documentation_wordpress.htm">doc here</a>)</p>  
+               application first and configure application basic setting correctly, written in the <a target="_blank" href="http://extensions.techhelpsource.com/facebook_wall_documentation_wordpress.htm">doc here</a>)</p>  
             </div>  
           </div> 		  		   		 
 		   <div class="control-group">  
@@ -423,7 +423,7 @@ input[type="color"],.msmain_container
 
 <div id="ms_fourth_tab"  <?php echo $active4; ?>>
 <div class="well">  
-<h4><a target="_blank" href="http://extensions.programminghelp24.com/wordpress/facebook-wall-pro">upgrade to pro version for following facebook social plugins using shortcodes</a></h4>
+<h4><a target="_blank" href="http://extensions.techhelpsource.com/wordpress/facebook-wall-pro">upgrade to pro version for following facebook social plugins using shortcodes</a></h4>
 1.Facebook like button<br/><br />
 2.Facebook comments<br /><br />
 3.Facebook follow button<br /><br />
@@ -465,7 +465,7 @@ input[type="color"],.msmain_container
 <div class="row-fluid">
 <div class="well" style="color: navy">
 Please check <b>"System requirements"</b> tab above to know if your server has required methods enabled to display the content of the facebook feed <br/>
-using facebook Graph API call. For other requirements and identify errors if any view <a target="_blank" href="http://extensions.programminghelp24.com/facebook_wall_documentation_wordpress.htm">Documentation</a> 
+using facebook Graph API call. For other requirements and identify errors if any view <a target="_blank" href="http://extensions.techhelpsource.com/facebook_wall_documentation_wordpress.htm">Documentation</a> 
 </div> 
 
 <div class="well">
@@ -476,12 +476,12 @@ To override common settings include parameters as follows - <strong>[mitsol_fbwa
 </div>
 
 <div class="well">
-<a class="btn btn-info" target="_blank" style="font-weight:bold;" href="http://extensions.programminghelp24.com/wordpress/facebook-wall-pro">Click to Buy pro version now for a complete feed display for your website</a><br/><br/>
+<a class="btn btn-info" target="_blank" style="font-weight:bold;" href="http://extensions.techhelpsource.com/wordpress/facebook-wall-pro">Click to Buy pro version now for a complete feed display for your website</a><br/><br/>
 1.<strong>Display photo, video, links, event posts effectively, currently free version only shows textual/status posts</strong><br/><br/>
 2.Get more features and settings for choosing type of posts, various picture sizes, header display, like button display, number of likes, all comments with paging, more color options,nice scrolling,responsiveness others<br/><br/>
 3.Add popular facebook plugins - like button, comments, follow button anywhere in the pages, posts using short codes<br/><br/>
 
-<strong>View pro version demo for all the features here - <a class="btn btn-info" target="_blank" href="http://wordpress.programminghelp24.com/facebook-wall-pro/">Pro Demo</a></strong>
+<strong>View pro version demo for all the features here - <a class="btn btn-info" target="_blank" href="http://wordpress.techhelpsource.com/facebook-wall-pro/">Pro Demo</a></strong>
 
 </div>
 
