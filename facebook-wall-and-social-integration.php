@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: facebook wall and social integration
-Plugin URI: http://extensions.programminghelp24.com/wordpress/facebook-wall-pro/
+Plugin URI: http://extensions.techhelpsource.com/wordpress/facebook-wall-pro/
 Description: show facebook feed of page/group/profile and social integration  by mitsol(free version)
 Author: mitsol	
 Version: 1.1
-Author URI: http://extensions.programminghelp24.com/ 
+Author URI: http://extensions.techhelpsource.com/ 
 License: GPLv2 or later 
 */ 
 /* 
