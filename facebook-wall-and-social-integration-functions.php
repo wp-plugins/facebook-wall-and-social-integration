@@ -220,7 +220,7 @@ function msfb_exists($data){
 	else return true;
 }
 function msfb_modText($text){	
-	return msfb_nl2br(msfb_autoLink(msfb_escapeTags($text)));
+	return msfb_nl2br(msfb_escapeTags($text));
 }
 	
 function msfb_escapeTags($str){	
