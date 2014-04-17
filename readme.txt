@@ -2,7 +2,7 @@
 Contributors: mitsol
 Tags: facebook, feed, events, shortcode, social, status, posts, facebook wall, plugin
 Requires at least: 3.1
-Tested up to: 3.8.1
+Tested up to: 3.9
 Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -87,4 +87,4 @@ You can embed your Facebook feed directly into a template file by using the Word
 = 1.0 =
 * Launch!
 = 1.1 =
-* Plugin is now uses server side call to show feed as many users requested to have non-expired access token and others. Some new features like choosing post types, defining different picture sizes...
+* Plugin now uses server side call to show feed to have non-expired access token requested by many users. Some new features added like choosing post types, defining different picture sizes...
