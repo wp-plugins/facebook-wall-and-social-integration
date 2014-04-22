@@ -31,7 +31,7 @@ include_once dirname(__FILE__) . '/admin/facebook-wall-admin.php';
 register_activation_hook(__FILE__, 'facebook_wall_and_social_integration_activation'); // code to be run after activate of plugin
 register_deactivation_hook(__FILE__, 'facebook_wall_and_social_integration_deactivation'); 
 
-add_action('wp_enqueue_scripts', 'facebook_wall_and_social_integration_scripts'); //add scriptss
+//add_action('wp_enqueue_scripts', 'facebook_wall_and_social_integration_scripts'); //add scriptss
 //add_action('wp_enqueue_scripts', 'facebook_wall_and_social_integration_styles');// sdd styles
 
 //admin style 
