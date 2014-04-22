@@ -57,12 +57,38 @@ $msfb_type=""; $msfb_source_id="";
 $msfb_type = ($msfb_options['msfb_guestentries']== 'enabled') ? 'feed' : 'posts'; //if showGuest false = posts
 //graph api url
 $msfb_posts_url = 'https://graph.facebook.com/'. $atts[ 'id' ].'/' . $msfb_type . '?access_token='.$msfb_options['msfb_accesstoken'].'&limit='.trim($atts['num']);
-
+$msfb_cache_time = trim($msfb_options['msfb_cache_time']);
+if($msfb_options['msfb_cache_time_unit'] == 'minutes') $msfb_cache_time_unit = 60;
+if($msfb_options['msfb_cache_time_unit'] == 'hours') $msfb_cache_time_unit = 60*60;
+if(trim($msfb_options['msfb_cache_time_unit']) == '') $msfb_cache_time_unit = 60; //if empty
+$cache_in_seconds = $msfb_cache_time * $msfb_cache_time_unit;
 
 ////////////Now get data from Graph api
-$msfb_data_objs = Msfb_Wall_Get_Graph_API_Data($msfb_posts_url);
+//use cache if set
+if (($msfb_cache_time != 0)&&(($msfb_cache_time !=""))){
+	// Get any existing copy of our transient data
+	$transient_name = 'msfb_cache_'.$atts[ 'id' ];
+	if ( false === ( $msfb_data_objs_first = get_transient( $transient_name ) ) || $msfb_data_objs_first === null ) {
+		//Get the contents of the Facebook page
+		$msfb_data_objs_first = Msfb_Wall_Get_Graph_API_Data($msfb_posts_url);
+		//Cache the JSON
+		$msfb_data_objs = $msfb_data_objs_first;
+		//json decode of data
+		$msfbData = json_decode($msfb_data_objs);
+		if(isset($msfbData->error)) { } else { if(count($msfbData->data)<=0){ } else { set_transient( $transient_name, $msfb_data_objs_first, $cache_in_seconds ); } }
+		goto skip;
+	} else {
+		$msfb_data_objs_first = get_transient( $transient_name );
+		//If we can't find the transient then fall back to just getting the json from the api
+		if ($msfb_data_objs_first == false) $msfb_data_objs_first = Msfb_Wall_Get_Graph_API_Data($msfb_posts_url);
+	}
+} else {
+	$msfb_data_objs_first = Msfb_Wall_Get_Graph_API_Data($msfb_posts_url);
+}
+$msfb_data_objs = $msfb_data_objs_first;
 //json decode of data
 $msfbData = json_decode($msfb_data_objs);
+skip:
 $msfb_counter=0;
 
 /////////////data extraction.Check error first
