@@ -68,9 +68,9 @@ if (($msfb_cache_time != 0)&&(($msfb_cache_time !=""))){
 		if(isset($msfbData->error)) { } else { if(count($msfbData->data)<=0){ } else { set_transient( $transient_name, $msfb_data_objs_first, $cache_in_seconds ); } }
 		goto skip;
 	} else {
-		$msfb_data_objs_first = get_transient( $transient_name );
+		$msfb_data_objs_first = get_transient( $transient_name ); $msfb_html_content_first.="<!-- getting data from cache -->";
 		//If we can't find the transient then fall back to just getting the json from the api
-		if ($msfb_data_objs_first == false) $msfb_data_objs_first = Msfb_Wall_Get_Graph_API_Data($msfb_posts_url);
+		if ($msfb_data_objs_first == false) { $msfb_data_objs_first = Msfb_Wall_Get_Graph_API_Data($msfb_posts_url); $msfb_html_content_first.="<!-- transient not found -->"; } 
 	}
 } else {
 	$msfb_data_objs_first = Msfb_Wall_Get_Graph_API_Data($msfb_posts_url);
@@ -170,7 +170,7 @@ $msfb_source_id= explode("_",$msfbData->data[0]->id); //if not define here, thin
 <style type="text/css">
 #msfbmain-div-<?php echo $msfb_source_id[0]; ?> .scroll-content 
 {
-    overflow: auto;  <?php echo 'height:'.$msfb_options['msfb_facebookheight'].'px;';?> margin:2px 1px 2px 0;
+    overflow: auto;  <?php echo 'height:'.$msfb_options['msfb_facebookheight'].'px;';?> margin:2px 1px 2px 0; /*version 1.2*/
 }
 #msfbmain-div-<?php echo $msfb_source_id[0]; ?> 
 {
