@@ -1,15 +1,5 @@
 <?php
-/**/
-function facebook_wall_and_social_integration_scripts() {
-    global $post;
-    wp_enqueue_script('jquery');
-	
-    //wp_register_script('mitsol_feed_main_javascript', plugins_url('js/jquery.mitsol.fbookwall.js', __FILE__), array("jquery"));
-    //wp_enqueue_script('mitsol_feed_main_javascript');
-    wp_register_script('mitsol_feed_scroll_javascript', plugins_url('js/jquery.mCustomScrollbar.concat.min.js', __FILE__));
-    wp_enqueue_script('mitsol_feed_scroll_javascript');
-
-} 
+/**/ 
 // Example Use: [facebook_wall_and_social_integration_replace_com post_title="true" excerpt_length="true" categories="all" thumbnail="true" img_width="250" img_height="150" rows="2" columns="1" pages_number="2" template="amaz-columns.php"]
 function facebook_wall_and_social_integration_replace_scode($atts) { 
 /*	extract(shortcode_atts(array(
