@@ -3,7 +3,7 @@ Contributors: mitsol
 Tags: facebook, feed, events, shortcode, social, status, posts, facebook wall, plugin
 Requires at least: 3.1
 Tested up to: 3.9
-Stable tag: 1.1
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,9 +25,10 @@ Facebook wall and social integration shows **facebook feed/wall posts of page/pr
 * Select from date formats to display date your own way
 * multiple feed display per page
 * It's responsive and adjusts within the width of container
+* Feed data can be cached in database to load fast
 * others
 
-To display photo post, video post, link post, event post, choose type of posts, different picture sizes, the number of likes, all comments by paging for each Facebook post, header bar and like button at top, language settings, scrolling plugin,responsiveness and more then [upgrade to the Pro version](http://extensions.techhelpsource.com/wordpress/facebook-wall-pro "facebook wall pro"). Try out the [Pro demo](http://wordpress.techhelpsource.com/facebook-wall-pro/ "facebook wall Demo").
+To display photo post, video post, link post, event post, choose type of posts, different picture sizes, the number of likes, all comments per post using ajax call, header bar and like button at top, language settings, scrolling plugin,responsiveness and more then [upgrade to the Pro version](http://extensions.techhelpsource.com/wordpress/facebook-wall-pro "facebook wall pro"). Try out the [Pro demo](http://wordpress.techhelpsource.com/facebook-wall-pro/ "facebook wall Demo").
 
 == Installation ==
 
@@ -70,7 +71,7 @@ Yes you can choose type of posts to display.For this feature please upgrade to t
 
 = Can I show the comments associated with each Facebook post? =
 
-For this feature please upgrade to the [Pro version of the plugin](http://extensions.techhelpsource.com/wordpress/facebook-wall-pro "Facebook Wall Feed Pro").
+For this feature please upgrade to the [Pro version of the plugin](http://extensions.techhelpsource.com/wordpress/facebook-wall-pro "Facebook Wall Feed Pro"). From pro version 1.2 getting comments directly from facebook using ajax has been added.
 
 = How do I embed the Custom Facebook Feed directly into a WordPress page template? =
 
@@ -88,3 +89,5 @@ You can embed your Facebook feed directly into a template file by using the Word
 * Launch!
 = 1.1 =
 * Plugin now uses server side call to show feed to have non-expired access token requested by many users. Some new features added like choosing post types, defining different picture sizes...
+= 1.2 =
+* Feed data caching has been added to load faster.Some new pro version features like getting all comments directly from facebook by ajax call, and more improvements.
