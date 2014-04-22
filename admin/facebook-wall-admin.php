@@ -37,7 +37,9 @@ function facebook_wall_and_social_integration_display_settings () {
  	   $msfb_dateformat=$_REQUEST["msfb_dateformat"]; $options['msfb_dateformat']= $msfb_dateformat; 	   	   
  	   $msfb_timezone=$_REQUEST["msfb_timezone"]; $options['msfb_timezone']= $msfb_timezone;
  	   
-	   $msfb_showborder=$_REQUEST["msfb_showborder"]; $options['msfb_showborder']= $msfb_showborder;	     	 
+	   $msfb_showborder=$_REQUEST["msfb_showborder"]; $options['msfb_showborder']= $msfb_showborder;	
+	   $msfb_cache_time=$_REQUEST["msfb_cache_time"]; $options['msfb_cache_time']= $msfb_cache_time;
+	   $msfb_cache_time_unit=$_REQUEST["msfb_cache_time_unit"]; $options['msfb_cache_time_unit']= $msfb_cache_time_unit;     	 
 	   
 	   
 	   	update_option( 'ms_fbwall_plugin_general_settings', $options );
@@ -69,7 +71,9 @@ function facebook_wall_and_social_integration_display_settings () {
 	$msfb_dateformat_us = ($options['msfb_dateformat'] == 'us') ? 'selected' : '';
     $msfb_dateformat_nonus = ($options['msfb_dateformat'] == 'nonus') ? 'selected' : '';
     $msfb_timezone = ($options['msfb_timezone'] != '') ? $options['msfb_timezone'] : '';    
-    $msfb_showborder = ($options['msfb_showborder'] == 'enabled') ? 'checked' : '' ;      
+    $msfb_showborder = ($options['msfb_showborder'] == 'enabled') ? 'checked' : '' ;  
+	$msfb_cache_time = ($options['msfb_cache_time'] != '') ? $options['msfb_cache_time'] : '';
+    $msfb_cache_time_unit = ($options['msfb_cache_time_unit'] != '') ? $options['msfb_cache_time_unit'] : '';    
     
     //$msfb_post_layout=$_REQUEST["msfb_post_layout"]; $options['msfb_post_layout']= $msfb_post_layout;
 	//color
@@ -244,7 +248,19 @@ input[type="color"],.msmain_container
                 <input type="checkbox" <?php echo esc_attr_e($msfb_guestentries); ?> name="msfb_guestentries" id="msfb_guestentries" value="enabled" />  
               </label>  
             </div>  
-          </div>   
+          </div> 
+		  <div class="control-group"> 
+          <label class="control-label" for="msfb_guestentries">Check for new posts directly from facebook in every</label>                       
+            <div class="controls">  
+               <input name="msfb_cache_time" style="width: 100px;" id="msfb_cache_time" type="text" value="<?php echo esc_attr_e( $msfb_cache_time); ?>" size="4" />
+               <select name="msfb_cache_time_unit" style="width: 150px;">
+                   <option value="minutes" <?php if($msfb_cache_time_unit== "minutes") echo 'selected' ?> >minutes</option>
+                   <option value="hours" <?php if($msfb_cache_time_unit == "hours") echo 'selected' ?> >hours</option>                                                                        
+              </select>
+              <p class="help-block">If you want to cache facebook posts temporarily in database so that on next page load, feed will be shown from cached data.Set how long <br/>you want to keep cached data in database by entering value in textbox.If you don't want to cache, simply leave the textbox blank.   </p>
+            </div>  
+          </div> 
+		    
 		    <div class="control-group">  
             <label class="control-label" for="msfb_showdate">Show Date</label>  
             <div class="controls">  
@@ -365,7 +381,12 @@ input[type="color"],.msmain_container
               </label>  
             </div>  
           </div>          
-		  									               
+    	  <div class="control-group">              
+            <div class="controls">  
+            <b>More & more settings in pro version</b>  
+            </div>  
+          </div>
+		         							               
           <div class="form-actions"> 
   		   <input type="hidden" name="msfb_active_tab" value="1" /> 
             <input type="submit" name="submit" class="btn btn-primary" value="Update"/>   
