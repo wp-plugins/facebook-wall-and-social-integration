@@ -57,9 +57,12 @@ Access Token is required by Facebook in order to access their feeds. It's easy t
 
 = Why isn't the feed from my group/page displaying? =
 
-At first, check that your group/page is public and not a private group/page.
-Also, make sure to check the 'Show guest entries' option in the settings page.Furthermore, increase the  **Show number of posts** value from settings becuase 
-non-pro version only shows status/textual posts of page/group/profile so there may not be status posts in the number of posts value specified.
+Make sure system requirements are met(look for the tab in settings page), facebook id and access token are right. Also, increase the  **Show number of posts** value from settings becuase 
+non-pro version only shows status/textual posts of page/group/profile so there may not be status posts in the number of posts value specified. Finally, make sure if there are no restrictions set in facebook page/group settings comparing with other page/groups for which feed works, mainly remove country and age restrictions in page/group settings.
+
+= Why my facebook profile feed not displaying properly? =
+
+If you created facebook application after 30th April 2014 and using it's token then profile feed may not be displayed for new facebook Graph API.Actually Displaying feed for profile shows only public and selected posts because of various restrictions.So it's not good to show profile feed.
 
 = Can I show photos and videos in my Facebook feed? =
 
