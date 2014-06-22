@@ -1,179 +1,70 @@
-/*------------------------------------------------------------------------
-# facebook wall pro by mitsol
-# ------------------------------------------------------------------------
+/*
 # author  Mitsol
 # copyright Copyright (c) 2013 Mitsol - Development Team
 # @license - GPLv2 or later http://www.gnu.org/licenses/old-licenses/gpl-2.0.html 
-# Websites http://extensions.programminghelp24.com 
--------------------------------------------------------------------------*/
+# Websites http://extensions.techhelpsource.com 
+ */
 /* global styles */
 .msfb-wall-main a {
   color:#0088cc;
   text-decoration:none !important; 
-  font-size:13px !important;
+  font-size:11px !important;
 } 
-.msfb-wall-main a:focus {
-  outline: thin dotted #333;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px; 
-}
-
-.msfb-wall-main a:hover,.msfb-wall-main a:active, .msfb-wall-main a:focus {
-  outline: 0 !important; 
-}
+.msfb-wall-main a:focus { outline: thin dotted #333; outline: 5px auto -webkit-focus-ring-color; outline-offset: -2px; }
+.msfb-wall-main a:hover,.msfb-wall-main a:active, .msfb-wall-main a:focus { outline: 0 !important; }
 .msfb-wall-main a:active {
-  background-color: transparent !important; color: #006699 !important; font-size:13px !important;
+  background-color: transparent !important; font-size:11px;
 }
-.msfb-wall-main a:hover,.msfb-wall-main 
-a:focus {
-  color: #005580;  
-  background-color:transparent !important; color: navy !important; font-size:13px !important;
-}
-
+.msfb-wall-main a:hover,.msfb-wall-main a:focus{ background-color:transparent !important; font-size:11px;text-decoration:underline !important;}
 .msfb-wall-main img {
   width: auto\9;
   height: auto;
   max-width: 100%;
+  margin:0; padding:0;
   vertical-align: middle;
   border:0;
   -ms-interpolation-mode: bicubic;
-   box-shadow:none;/*me*/
-}	
-.msfb-wall-main iframe
-{
-  margin-bottom:0px;
-}
-  
+   box-shadow:none;
+}	 
 /* wall styles */
 .msfb-wall-main .msfb-wall
 {
     /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;*/
-	font-family: "lucida grande",tahoma,arial,verdana,sans-serif !important; /* my*/
+	font-family: "lucida grande",tahoma,arial,verdana,sans-serif !important; 
 	font-size:13px !important;
 	font-weight: normal;
-	padding:5px;	
-	line-height:1.2em !important;
-	color:#333333;	
-	overflow-x:none;	
+	line-height:1.2em !important;	
+	padding:0px 5px 5px 5px; /*scroll bar position fix */ color:#333333;overflow-x:none;	
 }
-
-.msfb-wall-main .msfb-wall.loading
-{
-	height:300px;
-	background:url(../images/loadersmall.gif) no-repeat center center;
+.msfb-wall-main .msfb-layout{ background: transparent;margin: 0 8px 8px; /* top right+left bottom*/ overflow: hidden;padding: 5px;width: auto;}
+.msfb-wall-main .msfb-layout .avatar{ float: left; }
+.msfb-wall-main .msfb-wall-box{margin-bottom:7px;border-top:1px solid #eee;padding-top:8px;}	
+.msfb-wall-main .msfb-wall-box-first{ border:0; }	
+.msfb-wall-main .msfb-wall-avatar{ float:left;border:0; }	
+.msfb-wall-main .msfb-wall-data{ /*for when avatar shown */margin-left:60px;
 }
-
-.msfb-wall-main .msfb-layout {
-background: transparent;
-margin: 0 8px 8px;
-overflow: hidden;
-padding: 5px;
-width: auto;
-}
-.msfb-wall-main .msfb-layout .avatar{
-	float: left;
-}
-
-.msfb-wall-main .msfb-wall-box{
-	margin-bottom:7px;
-	border-top:1px solid #eee;
-	padding-top:8px;}
-	
-.msfb-wall-main .msfb-wall-box-first{
-	border:0;
-	/*padding-top:0;*/
-	}
-	
-.msfb-wall-main .msfb-wall-avatar{
-	float:left;
-	border:0;
-	}
-	
-.msfb-wall-main .msfb-wall-data{
-	margin-left:60px;
-}
-.msfb-wall-main .msfb-wall-message{
-	display:block;
-	margin-bottom:5px;
-}
-	
-.msfb-wall-main .msfb-wall-message-from{
-	font-weight:bold;
-	color:#3B5998;
-}
-	
-/*.msfb-wall-main .msfb-wall-link{
-	color:#333;
-	font-size:11px;
-	text-decoration:none;
-}*/
-.msfb-wall-main .msfb-wall-media{
-	display:block;
-	font-size:11px;
-	margin-bottom:5px;
-}
-	
-.msfb-wall-main .msfb-wall-media-container{
-	/*display:table;*/ /*display table may be hidden for responsive design*/
-}
-	
-.msfb-wall-main .msfb-wall-media-link
-{
-/*    float:left;
-	border:1px solid #ccc;
-	display:inline-block;*/
-	color:#3B5998;
-	cursor:pointer;	
-	/*margin-right:5px;*/ 
-	margin-right:0px !important; margin-left:0px !important;
-	padding-right:0px !important; padding-left:0px !important;
-	font-size:12px !important; border:none !important; 
-
-}	
-.msfb-wall-main .msfb-wall-media-link:hover
-{
-	/*border:1px solid #3B5998;*/
-	/*margin-right:5px;*/
-}
-	
-.msfb-wall-main .msfb-wall-name
-{
-	display:block;
-	font-weight:bold; 
-	color:#3B5998; font-size:12px !important;
-}
-.msfb-wall-main .msfb-wall-name:hover,.msfb-wall-main .msfb-wall-name:active, .msfb-wall-main .msfb-wall-name:focus
-{
-	font-size:12px !important;
-}			
+.msfb-wall-main .msfb-wall-message{display:block;margin-bottom:5px;text-align:left !important;/*new 1.6*/line-height:1.2em; /*new  1.6*/}
+.msfb-wall-main .msfb-wall-message a { line-height:1.2em; /*new  1.6*/ }	
+.msfb-wall-main .msfb-wall-message-from{font-weight:bold;color:#3B5998;text-align:left !important;/*left prob 1.6*/}
 .msfb-wall-main .msfb-wall-date
 {
 	font-size:11px;
 	color:#777;
 	clear:left;
 	display:block;
-	margin-bottom:5px;
-}
-.msfb-wall-main .msfb-wall-date a
-{
-  font-size:11px !important;
-}
-.msfb-wall-main .msfb-wall-date a:hover, .msfb-wall-main .msfb-wall-date a:active, .msfb-wall-main .msfb-wall-date a:focus
-{
-  font-size:11px !important;
+	margin:2px 0 5px 0;
 }
 .msfb-wall-main .msfb-wall-icon
 {
 	float:left;
 	margin-right:5px;
 }
-
 /* wall styles end */
 
 /* responsive styles */
 .msfb-wall-main .msfb-container {
 /*  padding-right: 20px;
-  padding-left: 20px; me*/
+  padding-left: 20px; new*/
   *zoom: 1;
 }
 .msfb-wall-main .msfb-container:before,.msfb-wall-main 
@@ -310,10 +201,7 @@ width: auto;
   .msfb-wall-main .msfb-row .controls-row [class*="span_len"] + [class*="span_len"] {
     margin-left: 2.564102564102564%;
   }
-  .msfb-wall-main .msfb-row .span_len12 {
-    width: 100%;
-    *width: 99.94680851063829%;
-  }
+  .msfb-wall-main .msfb-row .span_len12 {width: 100%;*width: 99.94680851063829%;}
   .msfb-wall-main .msfb-row .span_len11 {
     width: 91.45299145299145%;
     *width: 91.39979996362975%;
@@ -463,16 +351,13 @@ width: auto;
        -moz-box-sizing: border-box;
             box-sizing: border-box;
   }
-
 }
-
 @media (max-width: 480px) {   
 }
 @media (max-width: 979px) {   
 }
 @media (min-width: 980px) { 
 }
-
 @media print {
   * {
     color: #000 !important;
@@ -501,11 +386,7 @@ width: auto;
   @page  {
     margin: 0.5cm;
   }
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
 }
+
+
 
