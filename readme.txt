@@ -2,8 +2,8 @@
 Contributors: mitsol
 Tags: facebook, feed, events, shortcode, social, status, posts, facebook wall, plugin
 Requires at least: 3.1
-Tested up to: 3.9
-Stable tag: 1.2
+Tested up to: 3.9.1
+Stable tag: 1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -26,9 +26,10 @@ Facebook wall and social integration shows **facebook feed/wall posts of page/pr
 * multiple feed display per page
 * It's responsive and adjusts within the width of container
 * Feed data can be cached in database to load fast
+* Show/hide individual items in post
 * others
 
-To display photo post, video post, link post, event post, choose type of posts, different picture sizes, the number of likes, all comments per post using ajax call, header bar and like button at top, language settings, scrolling plugin,responsiveness and more then [upgrade to the Pro version](http://extensions.techhelpsource.com/wordpress/facebook-wall-pro "facebook wall pro"). Try out the [Pro demo](http://wordpress.techhelpsource.com/facebook-wall-pro/ "facebook wall Demo").
+To display photo post, video post, link post, event post, choose type of posts, show/hide items in post, different picture sizes, the number of likes, all comments per post using ajax call, header bar and like button at top, language settings, scrolling plugin,responsiveness and more then [upgrade to the Pro version](http://extensions.techhelpsource.com/wordpress/facebook-wall-pro "facebook wall pro"). Try out the [Pro demo](http://wordpress.techhelpsource.com/facebook-wall-pro/ "facebook wall Demo").
 
 == Installation ==
 
@@ -94,3 +95,9 @@ You can embed your Facebook feed directly into a template file by using the Word
 * Plugin now uses server side call to show feed to have non-expired access token requested by many users. Some new features added like choosing post types, defining different picture sizes...
 = 1.2 =
 * Feed data caching has been added to load faster.Some new pro version features like getting all comments directly from facebook by ajax call, and more improvements.
+= 1.3 =
+* Show/hide each individual items of post like author avatar, photos, comments ....
+* Font size(pro) and color for each items of the post
+* All settings now can be set in short code attributes 
+* embed youtube videos in feed display(pro)
+* other fixes
