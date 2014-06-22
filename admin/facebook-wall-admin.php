@@ -21,81 +21,115 @@ function facebook_wall_and_social_integration_display_settings () {
     }
     
 	$options = get_option('ms_fbwall_plugin_general_settings');
+	$options_layout = get_option('ms_fbwall_plugin_postlayout_settings');
 	$options_color = get_option('ms_fbwall_plugin_color_settings');	
 			
     if((isset($_REQUEST["msfb_active_tab"]))&&($_REQUEST["msfb_active_tab"] == "1"))
 	{ 
 	   //first variable
 	   $msfb_fbid=$_REQUEST["msfb_fbid"]; $options['msfb_fbid']= $msfb_fbid;
-   	   $msfb_accesstoken=$_REQUEST["msfb_accesstoken"]; $options['msfb_accesstoken']= $msfb_accesstoken;   	      	   
-   	   $msfb_facebookwidth=$_REQUEST["msfb_facebookwidth"]; $options['msfb_facebookwidth']= $msfb_facebookwidth;   	   
-   	   $msfb_facebookheight=$_REQUEST["msfb_facebookheight"]; $options['msfb_facebookheight']= $msfb_facebookheight;   	      	  
-   	   $msfb_postlikebutton=$_REQUEST["msfb_postlikebutton"]; $options['msfb_postlikebutton']= $msfb_postlikebutton;	  
+   	   $msfb_accesstoken=$_REQUEST["msfb_accesstoken"]; $options['msfb_accesstoken']= $msfb_accesstoken;   	  
+   	   $msfb_facebookwidth=$_REQUEST["msfb_facebookwidth"]; $options['msfb_facebookwidth']= $msfb_facebookwidth;
+   	   
+   	   $msfb_facebookheight=$_REQUEST["msfb_facebookheight"]; $options['msfb_facebookheight']= $msfb_facebookheight;   	   	 
        $msfb_postnum=$_REQUEST["msfb_postnum"]; $options['msfb_postnum']= $msfb_postnum; 	
        $msfb_guestentries=$_REQUEST["msfb_guestentries"]; $options['msfb_guestentries']= $msfb_guestentries; 
-       $msfb_showdate=$_REQUEST["msfb_showdate"]; $options['msfb_showdate']= $msfb_showdate;
- 	   $msfb_dateformat=$_REQUEST["msfb_dateformat"]; $options['msfb_dateformat']= $msfb_dateformat; 	   	   
- 	   $msfb_timezone=$_REQUEST["msfb_timezone"]; $options['msfb_timezone']= $msfb_timezone;
  	   
-	   $msfb_showborder=$_REQUEST["msfb_showborder"]; $options['msfb_showborder']= $msfb_showborder;	
+	   $msfb_showborder=$_REQUEST["msfb_showborder"]; $options['msfb_showborder']= $msfb_showborder;	    	
+
 	   $msfb_cache_time=$_REQUEST["msfb_cache_time"]; $options['msfb_cache_time']= $msfb_cache_time;
-	   $msfb_cache_time_unit=$_REQUEST["msfb_cache_time_unit"]; $options['msfb_cache_time_unit']= $msfb_cache_time_unit;     	 
+	   $msfb_cache_time_unit=$_REQUEST["msfb_cache_time_unit"]; $options['msfb_cache_time_unit']= $msfb_cache_time_unit;	   
+	   //new version 1.3 
+	   //$msfb_pgowncomment=$_REQUEST["msfb_pgowncomment"]; $options['msfb_pgowncomment']= $msfb_pgowncomment;
 	   
-	   
-	   	update_option( 'ms_fbwall_plugin_general_settings', $options );
+	   update_option( 'ms_fbwall_plugin_general_settings', $options );
 	   	   
 	} 
-    if((isset($_REQUEST["msfb_active_tab"]))&&($_REQUEST["msfb_active_tab"] == "2"))
-	{ 
-	   //first variable
-	   $msfb_postcolor=$_REQUEST["msfb_postcolor"]; $options_color['msfb_postcolor']= $msfb_postcolor;
-	   $msfb_backcolor=$_REQUEST["msfb_backcolor"]; $options_color['msfb_backcolor']= $msfb_backcolor;
+	//layout
+	if((isset($_REQUEST["msfb_active_tab"]))&&($_REQUEST["msfb_active_tab"] == "2"))
+	{
+	   $msfb_showauthavatar = $_REQUEST["msfb_showauthavatar"]; $options_layout['msfb_showauthavatar']= $msfb_showauthavatar;
+	   $msfb_showauthname = $_REQUEST["msfb_showauthname"]; $options_layout['msfb_showauthname']= $msfb_showauthname;
+	   $msfb_showposttext = $_REQUEST["msfb_showposttext"]; $options_layout['msfb_showposttext']= $msfb_showposttext;	  
 	   
+	   $msfb_showdate=$_REQUEST["msfb_showdate"]; $options_layout['msfb_showdate']= $msfb_showdate;
+	   $msfb_dateformat=$_REQUEST["msfb_dateformat"]; $options_layout['msfb_dateformat']= $msfb_dateformat;
+	   $msfb_timezone=$_REQUEST["msfb_timezone"]; $options_layout['msfb_timezone']= $msfb_timezone;
+	   
+	   $msfb_postlikebutton=$_REQUEST["msfb_postlikebutton"]; $options_layout['msfb_postlikebutton']= $msfb_postlikebutton;
+	   $msfb_postlikebtntxt=$_REQUEST["msfb_postlikebtntxt"]; $options_layout['msfb_postlikebtntxt']= $msfb_postlikebtntxt;	  	   	 
+	   
+   	   update_option( 'ms_fbwall_plugin_postlayout_settings', $options_layout );
+	}
+	//color
+    if((isset($_REQUEST["msfb_active_tab"]))&&($_REQUEST["msfb_active_tab"] == "3"))
+	{ 
+	   $msfb_backcolor=$_REQUEST["msfb_backcolor"]; $options_color['msfb_backcolor']= $msfb_backcolor;
 	   $msfb_postbordercolor=$_REQUEST["msfb_postbordercolor"]; $options_color['msfb_postbordercolor']= $msfb_postbordercolor;
-	   $msfb_linkcolor=$_REQUEST["msfb_linkcolor"]; $options_color['msfb_linkcolor']= $msfb_linkcolor;
-	   $msfb_datecolor=$_REQUEST["msfb_datecolor"]; $options_color['msfb_datecolor']= $msfb_datecolor;
-	    	   	   	   	   	   	   	   	      	  		   	   	   	   	   	   	   	   	  
+	  
+	   $msfb_postauthorcolor=$_REQUEST["msfb_postauthorcolor"]; $options_color['msfb_postauthorcolor']= $msfb_postauthorcolor;
+	  
+	   $msfb_posttextcolor=$_REQUEST["msfb_posttextcolor"]; $options_color['msfb_posttextcolor']= $msfb_posttextcolor;
+	   $msfb_datetextsize=$_REQUEST["msfb_datetextsize"]; $options_color['msfb_datetextsize'] = $msfb_datetextsize;
+	   $msfb_datecolor=$_REQUEST["msfb_datecolor"]; $options_color['msfb_datecolor']= $msfb_datecolor;	   
+	   $msfb_likecommenttextcolor=$_REQUEST["msfb_likecommenttextcolor"]; $options_color['msfb_likecommenttextcolor']= $msfb_likecommenttextcolor;
+	  	   	   	   	   	   	   	   	      	  		   	   	   	   	   	   	   	   	  
 	   	update_option( 'ms_fbwall_plugin_color_settings', $options_color );
 	   	   
 	} 					
-  
-	//
-    $msfb_fbid = ($options['msfb_fbid'] != '') ? $options['msfb_fbid'] : 'joomla';
-    $msfb_accesstoken = ($options['msfb_accesstoken'] != '') ? $options['msfb_accesstoken'] : '';   
+    if((isset($_REQUEST["msfb_active_tab"]))&&($_REQUEST["msfb_active_tab"] == "4"))
+	{ 	   	  
+	} 	
+    if((isset($_REQUEST["msfb_active_tab"]))&&($_REQUEST["msfb_active_tab"] == "5"))
+	{ 	   	   
+	} 				
+	//general 
+    $msfb_fbid = ($options['msfb_fbid'] != '') ? $options['msfb_fbid'] : '';
+    $msfb_accesstoken = ($options['msfb_accesstoken'] != '') ? $options['msfb_accesstoken'] : '';    
 	$msfb_facebookwidth = ($options['msfb_facebookwidth'] != '') ? $options['msfb_facebookwidth'] : '550';	
-	$msfb_facebookheight = ($options['msfb_facebookheight'] != '') ? $options['msfb_facebookheight'] : '550';	   
-    $msfb_postlikebutton  = ($options['msfb_postlikebutton'] == 'enabled') ? 'checked' : '' ;	   	
-    $msfb_postnum = ($options['msfb_postnum'] != '') ? $options['msfb_postnum'] : '30'; 
-    $msfb_guestentries = ($options['msfb_guestentries'] == 'enabled') ? 'checked' : '' ;		
-    $msfb_showdate = ($options['msfb_showdate'] == 'enabled') ? 'checked' : '' ;	
-	$msfb_dateformat_us = ($options['msfb_dateformat'] == 'us') ? 'selected' : '';
-    $msfb_dateformat_nonus = ($options['msfb_dateformat'] == 'nonus') ? 'selected' : '';
-    $msfb_timezone = ($options['msfb_timezone'] != '') ? $options['msfb_timezone'] : '';    
-    $msfb_showborder = ($options['msfb_showborder'] == 'enabled') ? 'checked' : '' ;  
-	$msfb_cache_time = ($options['msfb_cache_time'] != '') ? $options['msfb_cache_time'] : '';
-    $msfb_cache_time_unit = ($options['msfb_cache_time_unit'] != '') ? $options['msfb_cache_time_unit'] : '';    
+	$msfb_facebookheight = ($options['msfb_facebookheight'] != '') ? $options['msfb_facebookheight'] : '550';	
+       	
+    $msfb_postnum = ($options['msfb_postnum'] != '') ? $options['msfb_postnum'] : '10'; 
+    $msfb_guestentries = ($options['msfb_guestentries'] == 'enabled') ? 'checked' : '' ;		       
+    $msfb_showborder = ($options['msfb_showborder'] == 'enabled') ? 'checked' : '' ;    
+    $msfb_cache_time = ($options['msfb_cache_time'] != '') ? $options['msfb_cache_time'] : '';
+    $msfb_cache_time_unit = ($options['msfb_cache_time_unit'] != '') ? $options['msfb_cache_time_unit'] : '';
+      
+    //post layout
+    $msfb_showauthavatar =  ($options_layout['msfb_showauthavatar'] == 'enabled') ? 'checked' : '' ;
+    $msfb_showauthname =   ($options_layout['msfb_showauthname'] == 'enabled') ? 'checked' : '' ;
+    $msfb_showposttext =  ($options_layout['msfb_showposttext'] == 'enabled') ? 'checked' : '' ;
+         
+    $msfb_postlikebutton  = ($options_layout['msfb_postlikebutton'] == 'enabled') ? 'checked' : '' ;
+    $msfb_postlikebtntxt=($options_layout['msfb_postlikebtntxt'] != '') ? $options_layout['msfb_postlikebtntxt'] : 'Like';                    
+    $msfb_showdate = ($options_layout['msfb_showdate'] == 'enabled') ? 'checked' : '' ;
+    $msfb_dateformat_us = ($options_layout['msfb_dateformat'] == 'us') ? 'selected' : '';
+    $msfb_dateformat_nonus = ($options_layout['msfb_dateformat'] == 'nonus') ? 'selected' : '';
+    $msfb_timezone = ($options_layout['msfb_timezone'] != '') ? $options_layout['msfb_timezone'] : 'Europe/London';     
     
-    //$msfb_post_layout=$_REQUEST["msfb_post_layout"]; $options['msfb_post_layout']= $msfb_post_layout;
-	//color
-	$msfb_postcolor = ($options_color['msfb_postcolor'] != '') ? $options_color['msfb_postcolor'] : '#333333'; 	
-	$msfb_backcolor = ($options_color['msfb_backcolor'] != '') ? $options_color['msfb_backcolor'] : '#ffffff'; 		
-	$msfb_postbordercolor = ($options_color['msfb_postbordercolor'] != '') ? $options_color['msfb_postbordercolor'] : '#F0F0F0'; 	
-	$msfb_linkcolor = ($options_color['msfb_linkcolor'] != '') ? $options_color['msfb_linkcolor'] : '#3B5998'; 	
-	$msfb_datecolor = ($options_color['msfb_datecolor'] != '') ? $options_color['msfb_datecolor'] : '#777'; 			
-	
+	//color	 	
+	$msfb_backcolor = ($options_color['msfb_backcolor'] != '') ? $options_color['msfb_backcolor'] : '#ffffff';
+	$msfb_postbordercolor = ($options_color['msfb_postbordercolor'] != '') ? $options_color['msfb_postbordercolor'] : '#F0F0F0';	
+	$msfb_postauthorcolor=($options_color['msfb_postauthorcolor'] != '') ? $options_color['msfb_postauthorcolor'] : '#3B5998';	
+	$msfb_posttextcolor=($options_color['msfb_posttextcolor'] != '') ? $options_color['msfb_posttextcolor'] : '#333333';			
+	$msfb_datecolor=($options_color['msfb_datecolor'] != '') ? $options_color['msfb_datecolor'] : '#777';
+	$msfb_likecommenttextcolor=($options_color['msfb_likecommenttextcolor'] != '') ? $options_color['msfb_likecommenttextcolor'] : '#3B5998';		 	
+	 
    if(isset($_REQUEST["msfb_active_tab"])) { //if($_REQUEST["settings-updated"] == "true"){ 
-   if($_REQUEST["msfb_active_tab"] == "1"){ $setting_section="General"; }    if($_REQUEST["msfb_active_tab"] == "2"){ $setting_section="Color"; }    if($_REQUEST["msfb_active_tab"] == "3"){ $setting_section="Language"; }    if($_REQUEST["msfb_active_tab"] == "4"){ $setting_section="Social plugin"; }
+   if($_REQUEST["msfb_active_tab"] == "1"){ $setting_section="General"; }    if($_REQUEST["msfb_active_tab"] == "2"){ $setting_section="Post layout"; }    if($_REQUEST["msfb_active_tab"] == "3"){ $setting_section="Design"; } if($_REQUEST["msfb_active_tab"] == "4"){ $setting_section="Language"; } if($_REQUEST["msfb_active_tab"] == "5"){ $setting_section="Social plugin"; }
 	    $msfb_success_error='<div class="alert alert-success">  
         <a class="close" data-dismiss="alert">x</a>  
         '. $setting_section .' settings saved successfully
         </div>';
-	} 	 
+	} 	 	
 	
    (!isset($_REQUEST["msfb_active_tab"])) ? $msfb_active_tab="1": $msfb_active_tab = $_REQUEST["msfb_active_tab"];
 
-    if($msfb_active_tab =="1"){ $active=""; $active2='style="display:none;"';$active3='style="display:none;"'; $active4='style="display:none;"'; $active5='style="display:none;"'; $activetab='class="active"'; $activetab2='';  $activetab3=''; $activetab4=''; $activetab5=''; }
-    if($msfb_active_tab =="2"){ $active2=""; $active='style="display:none;"'; $active3='style="display:none;"'; $active4='style="display:none;"'; $active5='style="display:none;"'; $activetab2='class="active"'; $activetab='';  $activetab3=''; $activetab4=''; $activetab5=''; }	
-	if($msfb_active_tab =="4"){ $active4=""; $active3='style="display:none;"'; $active='style="display:none;"'; $active2='style="display:none;"'; $active5='style="display:none;"';  $activetab4='class="active"'; $activetab3=''; $activetab='';  $activetab2=''; $activetab5=''; }
+    if($msfb_active_tab =="1"){ $active=""; $active2='style="display:none;"';$active3='style="display:none;"'; $active4='style="display:none;"'; $active5='style="display:none;"'; $active6='style="display:none;"'; $activetab='class="active"'; $activetab2='';  $activetab3=''; $activetab4=''; $activetab5=''; $activetab6=''; }
+    if($msfb_active_tab =="2"){ $active2=""; $active='style="display:none;"'; $active3='style="display:none;"'; $active4='style="display:none;"'; $active5='style="display:none;"'; $active6='style="display:none;"'; $activetab2='class="active"'; $activetab='';  $activetab3=''; $activetab4=''; $activetab5=''; $activetab6=''; }
+	if($msfb_active_tab =="3"){ $active3=""; $active='style="display:none;"';  $active2='style="display:none;"';  $active4='style="display:none;"'; $active5='style="display:none;"'; $active6='style="display:none;"';  $activetab3='class="active"'; $activetab='';  $activetab2=''; $activetab4=''; $activetab5=''; $activetab6=''; }
+	if($msfb_active_tab =="4"){ $active4=""; $active3='style="display:none;"'; $active='style="display:none;"'; $active2='style="display:none;"'; $active5='style="display:none;"'; $active6='style="display:none;"';  $activetab4='class="active"'; $activetab3=''; $activetab='';  $activetab2=''; $activetab5=''; $activetab6=''; }
+	if($msfb_active_tab =="5"){ $active5=""; $active3='style="display:none;"'; $active='style="display:none;"'; $active2='style="display:none;"'; $active4='style="display:none;"'; $active6='style="display:none;"'; $activetab5='class="active"'; $activetab3=''; $activetab='';  $activetab2=''; $activetab4=''; $activetab6=''; }
 
 ?>
 <div class="msmain_container" style="margin-top:10px;">	
@@ -103,35 +137,46 @@ function facebook_wall_and_social_integration_display_settings () {
 var ms_js = jQuery.noConflict();  	
 ms_js(function(){		 	
  ms_js("#ms_1st_tablink").click(function() {
-     ms_js("#ms_1st_tab").show(); 
-	 ms_js("#ms_2nd_tab").hide(); 
-	 ms_js("#ms_third_tab").hide();	
-	 ms_js("#ms_fourth_tab").hide();  	
-	 ms_js("#ms_fifth_tab").hide();
+     ms_js("#ms_1st_tab").show();  ms_js("#ms_2nd_tab").hide();  ms_js("#ms_third_tab").hide();	 ms_js("#ms_fourth_tab").hide();  	
+	 ms_js("#ms_fifth_tab").hide(); ms_js("#ms_sixth_tab").hide();
 	  
-  	 ms_js("#ms_1st_list").addClass("active"); 	 
-	 ms_js("#ms_2nd_list").removeClass("active");
-  	 ms_js("#ms_third_list").removeClass("active");
-	 ms_js("#ms_fourth_list").removeClass("active"); 
-	 ms_js("#ms_fifth_list").removeClass("active");
+  	 ms_js("#ms_1st_list").addClass("active"); ms_js("#ms_2nd_list").removeClass("active"); ms_js("#ms_third_list").removeClass("active");
+	 ms_js("#ms_fourth_list").removeClass("active"); ms_js("#ms_fifth_list").removeClass("active");	 
   });
+ 
   ms_js("#ms_2nd_tablink").click(function() {
      ms_js("#ms_2nd_tab").show(); 
 	 ms_js("#ms_1st_tab").hide(); 
 	 ms_js("#ms_third_tab").hide();	
 	 ms_js("#ms_fourth_tab").hide();
 	 ms_js("#ms_fifth_tab").hide(); 
+	 ms_js("#ms_sixth_tab").hide();
 	  
   	 ms_js("#ms_2nd_list").addClass("active"); 	 
 	 ms_js("#ms_1st_list").removeClass("active");
   	 ms_js("#ms_third_list").removeClass("active"); 
 	 ms_js("#ms_fourth_list").removeClass("active"); 
 	 ms_js("#ms_fifth_list").removeClass("active");
-  });   
+  });
+   ms_js("#ms_third_tablink").click(function() {
+     ms_js("#ms_1st_tab").hide(); 
+	 ms_js("#ms_2nd_tab").hide(); 
+	 ms_js("#ms_sixth_tab").hide();
+	 ms_js("#ms_third_tab").show();	 
+ 	 ms_js("#ms_fourth_tab").hide();
+ 	ms_js("#ms_fifth_tab").hide(); 	
+	  
+  	 ms_js("#ms_1st_list").removeClass("active"); 	 
+	 ms_js("#ms_2nd_list").removeClass("active");
+  	 ms_js("#ms_third_list").addClass("active"); 
+	 ms_js("#ms_fourth_list").removeClass("active"); 
+	 ms_js("#ms_fifth_list").removeClass("active");
+  });
   ms_js("#ms_fourth_tablink").click(function() {
      ms_js("#ms_1st_tab").hide(); 
 	 ms_js("#ms_2nd_tab").hide(); 
 	 ms_js("#ms_third_tab").hide();
+	 ms_js("#ms_sixth_tab").hide();
 	 ms_js("#ms_fourth_tab").show();
 	 ms_js("#ms_fifth_tab").hide(); 	 	
 	  
@@ -146,13 +191,29 @@ ms_js(function(){
 		 ms_js("#ms_2nd_tab").hide(); 
 		 ms_js("#ms_third_tab").hide();
 		 ms_js("#ms_fourth_tab").hide(); 
-		 ms_js("#ms_fifth_tab").show(); 	 	
+		 ms_js("#ms_sixth_tab").hide();
+		 ms_js("#ms_fifth_tab").show(); 	 			 
 		  
 	     ms_js("#ms_fourth_list").removeClass("active");
 	  	 ms_js("#ms_1st_list").removeClass("active"); 	 
 		 ms_js("#ms_2nd_list").removeClass("active");
 	  	 ms_js("#ms_third_list").removeClass("active");
 	  	ms_js("#ms_fifth_list").addClass("active"); 
+	  });
+  ms_js("#ms_sixth_tablink").click(function() {
+	     ms_js("#ms_1st_tab").hide(); 
+		 ms_js("#ms_2nd_tab").hide(); 
+		 ms_js("#ms_third_tab").hide();
+		 ms_js("#ms_fourth_tab").hide(); 
+		 ms_js("#ms_fifth_tab").hide(); 
+		 ms_js("#ms_sixth_tab").show(); 	 	
+		  
+	     ms_js("#ms_fourth_list").removeClass("active");
+	  	 ms_js("#ms_1st_list").removeClass("active"); 	 
+		 ms_js("#ms_2nd_list").removeClass("active");
+	  	 ms_js("#ms_third_list").removeClass("active");
+	  	ms_js("#ms_fifth_list").removeClass("active"); 
+	  	ms_js("#ms_sixth_list").addClass("active"); 
 	  });
   ms_js(".msmain_container .close").click( function() {
     ms_js(this).parent("div").hide();
@@ -188,9 +249,11 @@ input[type="color"],.msmain_container
 <div class="span12"> <?php echo $msfb_success_error; ?> 
 <ul class="nav nav-tabs">  		 
 <li  id="ms_1st_list" style="cursor:pointer; cursor:hand" <?php echo $activetab ; ?> ><a id="ms_1st_tablink">General</a></li>  
-<li id="ms_2nd_list" style="cursor:pointer; cursor:hand" <?php echo $activetab2 ; ?>><a id="ms_2nd_tablink">Colors</a></li>  
-<li id="ms_fourth_list" style="cursor:pointer; cursor:hand"  <?php echo $activetab4; ?>><a id="ms_fourth_tablink">Facebook social plugins</a></li>  
-<li id="ms_fifth_list" style="cursor:pointer; cursor:hand"  <?php echo $activetab5; ?>><a id="ms_fifth_tablink">System requirements</a></li>  
+<li id="ms_2nd_list" style="cursor:pointer; cursor:hand" <?php echo $activetab2 ; ?>><a id="ms_2nd_tablink">Post layout</a></li>  
+<li id="ms_third_list" style="cursor:pointer; cursor:hand"  <?php echo $activetab3 ; ?>><a id="ms_third_tablink">Design</a></li>
+<li id="ms_fifth_list" style="cursor:pointer; cursor:hand"  <?php echo $activetab5; ?>><a id="ms_fifth_tablink">Facebook social plugins</a></li>
+<li id="ms_sixth_list" style="cursor:pointer; cursor:hand" <?php echo $activetab6 ; ?>><a id="ms_sixth_tablink">System requirements</a></li>
+  
 </ul>
 <div  id="ms_1st_tab" <?php echo $active; ?>> 
 <form method="post" name="general_options" action="" class="form-horizontal">  
@@ -200,7 +263,7 @@ input[type="color"],.msmain_container
             <label class="control-label" for="msfb_fbid">Facebook ID</label>  
             <div class="controls">  
 			<input type="text" class="input-xlarge" name="msfb_fbid" value="<?php echo esc_attr_e($msfb_fbid); ?>" id="msfb_fbid" />
-			<p class="help-block"><a target="_blank" href="http://extensions.techhelpsource.com/facebook_wall_documentation_wordpress.htm">read doc</a> or <a target="_blank" href="http://wordpress.org/plugins/facebook-wall-and-social-integration/faq/">plugin faq</a> to get facebook page/group/profile id</p> 
+			<p class="help-block"><a target="_blank" href="http://extensions.programminghelp24.com/facebook_wall_documentation_wordpress.htm">read doc</a> or <a target="_blank" href="http://wordpress.org/plugins/facebook-wall-and-social-integration/faq/">plugin faq</a> to get facebook page/group/profile id</p> 
             </div>  
           </div>  
 		  <div class="control-group">  
@@ -208,9 +271,9 @@ input[type="color"],.msmain_container
             <div class="controls">  
 			<input type="text" class="input-xlarge" name="msfb_accesstoken" value="<?php echo esc_attr_e($msfb_accesstoken); ?>" id="msfb_accesstoken" />
                <p class="help-block">it will be look like <b>123456789|23242hj323232jh3j2222fs45</b> (for this create facebook<br/>
-               application first and configure application basic setting correctly, written in the <a target="_blank" href="http://extensions.techhelpsource.com/facebook_wall_documentation_wordpress.htm">doc here</a>)</p>  
+               application first and configure application basic setting correctly, written in the <a target="_blank" href="http://extensions.programminghelp24.com/facebook_wall_documentation_wordpress.htm">doc here</a>)</p>  
             </div>  
-          </div> 		  		   		 
+          </div> 		  		 		 
 		   <div class="control-group">  
             <label class="control-label" for="msfb_facebookwidth">Width</label>  
             <div class="controls">  
@@ -220,20 +283,11 @@ input[type="color"],.msmain_container
           </div>  
 		  			 		  		        
 		  <div class="control-group">  
-            <label class="control-label" for="msfb_facebookheight">Height</label>  
+            <label class="control-label" for="msfb_facebookheight">Height(fixed)</label>  
             <div class="controls">  
 			<input type="text" class="input-xlarge" name="msfb_facebookheight" value="<?php echo esc_attr_e($msfb_facebookheight); ?>" id="msfb_facebookheight" />                        
             </div>  
-          </div>
-		  		  		
-		   <div class="control-group">  
-            <label class="control-label" for="msfb_postlikebutton">Show post like button</label>  
-            <div class="controls">  
-              <label class="checkbox">  
-                <input  type="checkbox" <?php echo esc_attr_e($msfb_postlikebutton); ?> name="msfb_postlikebutton" id="msfb_postlikebutton" value="enabled" />   
-              </label>  
-            </div>  
-          </div>		                     		 
+          </div>                  		 
 		  
 		  <div class="control-group">  
             <label class="control-label" for="msfb_postnum">Show number of posts</label>  
@@ -241,6 +295,7 @@ input[type="color"],.msmain_container
 			<input type="text"  class="input-xlarge" name="msfb_postnum" value="<?php echo esc_attr_e($msfb_postnum); ?>" id="msfb_postnum" />
             </div>  
           </div>
+            
 		  <div class="control-group">  
             <label class="control-label" for="msfb_guestentries">Show guest entries</label>  
             <div class="controls">  
@@ -249,19 +304,73 @@ input[type="color"],.msmain_container
               </label>  
             </div>  
           </div> 
-		  <div class="control-group"> 
-          <label class="control-label" for="msfb_guestentries">Check for new posts directly from facebook in every</label>                       
+        
+          <div class="control-group"> 
+          <label class="control-label" for="msfb_cache_time_unit">Check for new posts directly from facebook in every</label>                       
             <div class="controls">  
                <input name="msfb_cache_time" style="width: 100px;" id="msfb_cache_time" type="text" value="<?php echo esc_attr_e( $msfb_cache_time); ?>" size="4" />
                <select name="msfb_cache_time_unit" style="width: 150px;">
                    <option value="minutes" <?php if($msfb_cache_time_unit== "minutes") echo 'selected' ?> >minutes</option>
-                   <option value="hours" <?php if($msfb_cache_time_unit == "hours") echo 'selected' ?> >hours</option>                                                                        
+                   <option value="hours" <?php if($msfb_cache_time_unit == "hours") echo 'selected' ?> >hours</option>
+                   <option value="days" <?php if($msfb_cache_time_unit == "days") echo 'selected' ?> >days</option>                                                        
               </select>
-              <p class="help-block">If you want to cache facebook posts temporarily in database so that on next page load, feed will be shown from cached data.Set how long <br/>you want to keep cached data in database by entering value in textbox.If you don't want to cache, simply leave the textbox blank.   </p>
+              <p class="help-block">If you want to cache facebook posts temporarily in database so that on next page load, feed will be shown from cached data.You can set how long <br/>you want to keep cached data in database by entering value in textbox.If you don't want to cache, simply leave the textbox blank.   </p>
+            </div>  
+          </div>                                                                                    		   
+		    <div class="control-group">  
+            <label class="control-label" for="msfb_showborder">Show outer border</label>  
+            <div class="controls">  
+              <label class="checkbox">  
+                <input type="checkbox" <?php echo esc_attr_e($msfb_showborder); ?> name="msfb_showborder" id="msfb_showborder" value="enabled" />  
+              </label>  
             </div>  
           </div> 
-		    
-		    <div class="control-group">  
+          <div class="control-group">              
+            <div class="controls">  
+            <b>More settings available in pro version</b>  
+            </div>  
+          </div>
+		  									               
+          <div class="form-actions"> 
+  		   <input type="hidden" name="msfb_active_tab" value="1" /> 
+            <input type="submit" name="submit" class="btn btn-primary" value="Update"/>   
+          </div>  
+        </fieldset>  
+</form>  
+  
+</div> 
+<div id="ms_2nd_tab" <?php echo $active2; ?>>  
+<form method="post" name="color_options" action="" class="form-horizontal">  
+        <fieldset>  
+          <legend>Post Layout Settings</legend>
+          
+           <div class="control-group">  
+            <label class="control-label" for="msfb_showauthavatar">Show post author avatar</label>  
+            <div class="controls">  
+              <label class="checkbox">  
+                <input type="checkbox" <?php echo esc_attr_e($msfb_showauthavatar); ?> name="msfb_showauthavatar" id="msfb_showauthavatar" value="enabled" />  
+              </label>  
+            </div>  
+          </div> 
+          
+         <div class="control-group">  
+            <label class="control-label" for="msfb_showauthname">Show post author name</label>  
+            <div class="controls">  
+              <label class="checkbox">  
+                <input type="checkbox" <?php echo esc_attr_e($msfb_showauthname); ?> name="msfb_showauthname" id="msfb_showauthname" value="enabled" />  
+              </label>  
+            </div>  
+          </div> 
+          
+         <div class="control-group">  
+            <label class="control-label" for="msfb_showposttext">Show post text</label>  
+            <div class="controls">  
+              <label class="checkbox">  
+                <input type="checkbox" <?php echo esc_attr_e($msfb_showposttext); ?> name="msfb_showposttext" id="msfb_showposttext" value="enabled" />  
+              </label>  
+            </div>  
+          </div>                    
+          <div class="control-group">  
             <label class="control-label" for="msfb_showdate">Show Date</label>  
             <div class="controls">  
               <label class="checkbox">  
@@ -373,67 +482,26 @@ input[type="color"],.msmain_container
                                         <option value="Pacific/Kiritimati" <?php if($msfb_timezone == "Pacific/Kiritimati") echo 'selected="selected"' ?> ><?php _e('(GMT+14:00) Kiritimati'); ?></option>
                                     </select>
 		  </div></div>
-		    <div class="control-group">  
-            <label class="control-label" for="msfb_showborder">Show outer border</label>  
+		  
+		  <div class="control-group">  
+            <label class="control-label" for="msfb_postlikebutton">Show post like button</label>  
             <div class="controls">  
               <label class="checkbox">  
-                <input type="checkbox" <?php echo esc_attr_e($msfb_showborder); ?> name="msfb_showborder" id="msfb_showborder" value="enabled" />  
+                <input  type="checkbox" <?php echo esc_attr_e($msfb_postlikebutton); ?> name="msfb_postlikebutton" id="msfb_postlikebutton" value="enabled" />   
               </label>  
             </div>  
-          </div>          
-    	  <div class="control-group">              
-            <div class="controls">  
-            <b>More & more settings in pro version</b>  
-            </div>  
           </div>
-		         							               
-          <div class="form-actions"> 
-  		   <input type="hidden" name="msfb_active_tab" value="1" /> 
-            <input type="submit" name="submit" class="btn btn-primary" value="Update"/>   
-          </div>  
-        </fieldset>  
-</form>  
-  
-</div>  
-<div id="ms_2nd_tab" <?php echo $active2; ?>>  
-<form method="post" name="color_options" action="" class="form-horizontal">  
-        <fieldset>  
-          <legend>Color Settings</legend>
           <div class="control-group">  
-            <label class="control-label" for="msfb_postcolor">Post color of wall (#333333...)</label>  
+            <label class="control-label" for="msfb_postlikebtntxt">Post like button text</label>  
             <div class="controls">  
-			<input type="text" class="input-xlarge" name="msfb_postcolor" value="<?php echo esc_attr_e($msfb_postcolor); ?>" id="msfb_postcolor" />
-			 <p class="help-block"><a href="http://www.colorpicker.com/" target="_blank">Ex. #EG9A10 color picker</a></p>  
+			<input type="text" class="input-xlarge" name="msfb_postlikebtntxt" value="<?php echo esc_attr_e($msfb_postlikebtntxt); ?>" id="msfb_postlikebtntxt" />                        
             </div>  
           </div>  
-          <div class="control-group">  
-            <label class="control-label" for="msfb_backcolor">Background color of wall (#ffffff...)</label>  
+          <div class="control-group">              
             <div class="controls">  
-			<input type="text" class="input-xlarge" name="msfb_backcolor" value="<?php echo esc_attr_e($msfb_backcolor); ?>" id="msfb_backcolor" />
-						 <p class="help-block"><a href="http://www.colorpicker.com/" target="_blank">Ex. #EG9A10 color picker</a></p>  
+            <b>More settings available in pro version</b>  
             </div>  
-          </div> 		 
-		  
-		  <div class="control-group">  
-            <label class="control-label" for="msfb_postbordercolor">Post border color(#E6E8E8...)</label>  
-            <div class="controls">  
-			<input type="text" class="input-xlarge" name="msfb_postbordercolor" value="<?php echo esc_attr_e($msfb_postbordercolor); ?>" id="msfb_postbordercolor" />			 <p class="help-block"><a href="http://www.colorpicker.com/" target="_blank">Ex. #EG9A10 color picker</a></p>  
-            </div>  
-          </div> 
-		  <div class="control-group">  
-            <label class="control-label" for="msfb_linkcolor">All links color(#3B5998...)</label>  
-            <div class="controls">  
-			 <input type="text" class="input-xlarge" name="msfb_linkcolor" value="<?php echo esc_attr_e($msfb_linkcolor); ?>" id="msfb_linkcolor" />			 <p class="help-block"><a href="http://www.colorpicker.com/" target="_blank">Ex. #EG9A10 color picker</a></p>  
-            </div>  
-          </div> 
-		  <div class="control-group">  
-            <label class="control-label" for="msfb_datecolor">Date color(#777...)</label>  
-            <div class="controls">  
-			<input type="text" class="input-xlarge" name="msfb_datecolor" value="<?php echo esc_attr_e($msfb_datecolor); ?>" id="msfb_datecolor" />			 <p class="help-block"><a href="http://www.colorpicker.com/" target="_blank">Ex. #EG9A10 color picker</a></p>  
-            </div>  
-          </div> 			  
-		  
-		  									               
+          </div>          		  		  									              
           <div class="form-actions"> 
   		   <input type="hidden" name="msfb_active_tab" value="2" />
             <input type="submit" name="submit" class="btn btn-primary" value="Update"/>  
@@ -441,20 +509,79 @@ input[type="color"],.msmain_container
         </fieldset>  
 </form>  
 </div> 
-
-<div id="ms_fourth_tab"  <?php echo $active4; ?>>
-<div class="well">  
-<h4><a target="_blank" href="http://extensions.techhelpsource.com/wordpress/facebook-wall-pro">upgrade to pro version for following facebook social plugins using shortcodes</a></h4>
-1.Facebook like button<br/><br />
-2.Facebook comments<br /><br />
-3.Facebook follow button<br /><br />
-</div>  
-</div>
  
+<div id="ms_third_tab" <?php echo $active3; ?>>  
+<form method="post" name="color_options" action="" class="form-horizontal">  
+        <fieldset>  
+          <legend>Font and color Settings</legend> 
+          <div class="control-group">  
+            <label class="control-label" for="msfb_backcolor">Background color of wall (#ffffff...)</label>  
+            <div class="controls">  
+			<input type="text" class="input-xlarge" name="msfb_backcolor" value="<?php echo esc_attr_e($msfb_backcolor); ?>" id="msfb_backcolor" />
+						 <p class="help-block"><a href="http://www.colorpicker.com/" target="_blank">Ex. #EG9A10 color picker</a></p>  
+            </div>  
+          </div> 	
+          <div class="control-group">  
+            <label class="control-label" for="msfb_postbordercolor">Post border color(#E6E8E8...)</label>  
+            <div class="controls">  
+			<input type="text" class="input-xlarge" name="msfb_postbordercolor" value="<?php echo esc_attr_e($msfb_postbordercolor); ?>" id="msfb_postbordercolor" />			 
+			<p class="help-block"><a href="http://www.colorpicker.com/" target="_blank">Ex. #EG9A10 color picker</a></p>  
+            </div>  
+          </div> 
+          <div class="control-group">  
+            <label class="control-label" for="msfb_postauthorcolor">Post author name color(#3B5998...)</label>  
+            <div class="controls">  
+			<input type="text" class="input-xlarge" name="msfb_postauthorcolor" value="<?php echo esc_attr_e($msfb_postauthorcolor); ?>" id="msfb_postauthorcolor" />			 
+			<p class="help-block"><a href="http://www.colorpicker.com/" target="_blank">Ex. #3B5998 color picker</a></p>  
+            </div>  
+          </div>
+            
+          <div class="control-group">  
+            <label class="control-label" for="msfb_posttextcolor">Post text color(#333333...)</label>  
+            <div class="controls">  
+			<input type="text" class="input-xlarge" name="msfb_posttextcolor" value="<?php echo esc_attr_e($msfb_posttextcolor); ?>" id="msfb_posttextcolor" />			 
+			<p class="help-block"><a href="http://www.colorpicker.com/" target="_blank">Ex. #333333 color picker</a></p>  
+            </div>  
+          </div>
+          <div class="control-group">  
+            <label class="control-label" for="msfb_datecolor">Date text color(#777...)</label>  
+            <div class="controls">  
+			<input type="text" class="input-xlarge" name="msfb_datecolor" value="<?php echo esc_attr_e($msfb_datecolor); ?>" id="msfb_datecolor" />			 
+			<p class="help-block"><a href="http://www.colorpicker.com/" target="_blank">Ex. #777 color picker</a></p>  
+            </div>  
+          </div>  
+          
+          <div class="control-group">  
+            <label class="control-label" for="msfb_likecommenttextcolor">Post like link color(#3B5998...)</label>  
+            <div class="controls">  
+			<input type="text" class="input-xlarge" name="msfb_likecommenttextcolor" value="<?php echo esc_attr_e($msfb_likecommenttextcolor); ?>" id="msfb_likecommenttextcolor" />			 
+			<p class="help-block"><a href="http://www.colorpicker.com/" target="_blank">Ex. #3B5998 color picker</a></p>  
+            </div>  
+          </div>                                                       		 		  
+		  <div class="control-group">              
+            <div class="controls">  
+            <b>More settings available in pro version</b>  
+            </div>  
+          </div>						               
+          <div class="form-actions"> 
+  		   <input type="hidden" name="msfb_active_tab" value="3" />
+            <input type="submit" name="submit" class="btn btn-primary" value="Update"/>  
+          </div>  
+        </fieldset>  
+</form>  
+</div> 
 <div id="ms_fifth_tab"  <?php echo $active5; ?>>
+<div class="well">  
+<h5><a target="_blank" href="http://extensions.techhelpsource.com/wordpress/facebook-wall-pro">upgrade to pro version for following facebook social plugins using shortcodes</a></h5>
+1.Facebook like button<br/>
+2.Facebook comments<br />
+3.Facebook follow button<br />
+</div>  
+</div> 
+<div id="ms_sixth_tab"  <?php echo $active6; ?>>
 <form method="post" name="system_options" action="" class="form-horizontal">  
         <fieldset>  
-          <legend>System requirements</legend>
+          <legend>System requirements check</legend>
           <div class="control-group">  
            <label class="control-label" for="msfb_followwidth">To get feed some of these functions should be enabled in server</label>
             <div class="controls"> 
@@ -471,11 +598,6 @@ input[type="color"],.msmain_container
            * Json should be enabled(checked), but in any case it's disabled ask your host to enable it
                          
 		  </div>
-		  		   		 		 		  								               
-          <!-- <div class="form-actions"> 
-  		   <input type="hidden" name="msfb_active_tab" value="3" />		             				 
-            <input type="submit" name="submit" class="btn btn-primary" value="Update"/>  
-          </div>   -->
         </fieldset>  
 </form>  
 </div>
@@ -485,28 +607,18 @@ input[type="color"],.msmain_container
 
 <div class="row-fluid">
 <div class="well" style="color: navy">
-Please check <b>"System requirements"</b> tab above to know if your server has required methods enabled to display the content of the facebook feed <br/>
-using facebook Graph API call. For other requirements and identify errors if any view <a target="_blank" href="http://extensions.techhelpsource.com/facebook_wall_documentation_wordpress.htm">Documentation</a> 
+Please check <b>"System rquirements"</b> tab above to know if your server has required methods enabled to display the content of the facebook feed.Also if feed display<br/>
+not works, make sure facebook id and access token(<a target="_blank" href="https://developers.facebook.com/tools/debug/">check here</a>) are right. Finally, make sure if
+there are some restrictions set in facebook page/group/profile settings<br/> 
+comparing with other page/groups for which feed works.<br/><br/>Read instructions and identify errors if any in <a target="_blank" href="http://extensions.techhelpsource.com/facebook_wall_documentation_wordpress.htm">Documentation</a> 
 </div> 
-
 <div class="well">
 <h4>how to display feed</h4> 
 copy and paste this short code anywhere of page or post - <strong>[mitsol_fbwall_feed_short_code]</strong> <br/><br/>
-To override common settings include parameters as follows - <strong>[mitsol_fbwall_feed_short_code id="mitsol12" num="30"]</strong> <br/><br/>
+To override settings, include setting attributes in short codes as follows - <strong>[mitsol_fbwall_feed_short_code id="6427302910" like_btn="false" header="true" num="30" post_types="statuses,photos,videos" backg_color="#ffffff" post_text_size="12" ....... ]</strong> <br/><br/>
+<b><a target="_blank" href="http://extensions.techhelpsource.com/fbwall_wordpress_shortcodes.htm">Click here to view all short code attributes for free/pro version. </a></b>
 
-</div>
-
-<div class="well">
-<a class="btn btn-info" target="_blank" style="font-weight:bold;" href="http://extensions.techhelpsource.com/wordpress/facebook-wall-pro">Click to Buy pro version now for a complete feed display for your website</a><br/><br/>
-1.<strong>Display photo, video, links, event posts effectively, currently free version only shows textual/status posts</strong><br/><br/>
-2.Get more features and settings for choosing type of posts, various picture sizes, header display, caching feed data to database for fast loading, like button display, number of likes, getting all comments via ajax call, more color options,nice scrolling, responsiveness others<br/><br/>
-3.Add popular facebook plugins - like button, comments, follow button anywhere in the pages, posts using short codes<br/><br/>
-
-<strong>View pro version demo for all the features here - <a class="btn btn-info" target="_blank" href="http://wordpress.techhelpsource.com/facebook-wall-pro/">Pro Demo</a></strong>
-
-</div>
-
-</div>
+</div></div>
  
  </div>
  <?php  }
