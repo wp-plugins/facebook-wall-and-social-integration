@@ -86,6 +86,7 @@ You can embed your Facebook feed directly into a template file by using the Word
 1. This pic shows how feed look like by default settings and colors
 2. Configuring the facebook wall and social integration plugin
 3. Colors - Facebook wall color settings
+4. Post Layout - Facebook wall post layout settings
 
 == Changelog ==
 
