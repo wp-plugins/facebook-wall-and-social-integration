@@ -618,7 +618,18 @@ copy and paste this short code anywhere of page or post - <strong>[mitsol_fbwall
 To override settings, include setting attributes in short codes as follows - <strong>[mitsol_fbwall_feed_short_code id="6427302910" like_btn="false" header="true" num="30" post_types="statuses,photos,videos" backg_color="#ffffff" post_text_size="12" ....... ]</strong> <br/><br/>
 <b><a target="_blank" href="http://extensions.techhelpsource.com/fbwall_wordpress_shortcodes.htm">Click here to view all short code attributes for free/pro version. </a></b>
 
-</div></div>
+</div>
+<div class="well">
+<a class="btn btn-info" target="_blank" style="font-weight:bold;" href="http://extensions.techhelpsource.com/wordpress/facebook-wall-pro">Click to Buy pro version now for a complete feed display for your website</a><br/><br/>
+1.<strong>Display photo, video, links, event posts effectively, currently free version only shows textual/status posts</strong><br/><br/>
+2.Get more features and settings for choosing type of posts, show/hide each items of post, various picture sizes, header display, caching feed data to database for fast loading, like button display, number of likes, getting all comments via ajax call, more color & font size options, all settings in short code, nice scrolling, responsiveness others<br/><br/>
+3.Add popular facebook plugins - like button, comments, follow button anywhere in the pages, posts using short codes<br/><br/>
+
+<strong>View pro version demo for all the features here - <a class="btn btn-info" target="_blank" href="http://wordpress.techhelpsource.com/facebook-wall-pro/">Pro Demo</a></strong>
+
+</div>
+
+</div>
  
  </div>
  <?php  }
