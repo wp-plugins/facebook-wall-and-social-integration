@@ -263,7 +263,7 @@ input[type="color"],.msmain_container
             <label class="control-label" for="msfb_fbid">Facebook ID</label>  
             <div class="controls">  
 			<input type="text" class="input-xlarge" name="msfb_fbid" value="<?php echo esc_attr_e($msfb_fbid); ?>" id="msfb_fbid" />
-			<p class="help-block"><a target="_blank" href="http://extensions.programminghelp24.com/facebook_wall_documentation_wordpress.htm">read doc</a> or <a target="_blank" href="http://wordpress.org/plugins/facebook-wall-and-social-integration/faq/">plugin faq</a> to get facebook page/group/profile id</p> 
+			<p class="help-block"><a target="_blank" href="http://extensions.techhelpsource.com/facebook_wall_documentation_wordpress.htm">read doc</a> or <a target="_blank" href="http://wordpress.org/plugins/facebook-wall-and-social-integration/faq/">plugin faq</a> to get facebook page/group/profile id</p> 
             </div>  
           </div>  
 		  <div class="control-group">  
@@ -271,7 +271,7 @@ input[type="color"],.msmain_container
             <div class="controls">  
 			<input type="text" class="input-xlarge" name="msfb_accesstoken" value="<?php echo esc_attr_e($msfb_accesstoken); ?>" id="msfb_accesstoken" />
                <p class="help-block">it will be look like <b>123456789|23242hj323232jh3j2222fs45</b> (for this create facebook<br/>
-               application first and configure application basic setting correctly, written in the <a target="_blank" href="http://extensions.programminghelp24.com/facebook_wall_documentation_wordpress.htm">doc here</a>)</p>  
+               application first and configure application basic setting correctly, written in the <a target="_blank" href="http://extensions.techhelpsource.com/facebook_wall_documentation_wordpress.htm">doc here</a>)</p>  
             </div>  
           </div> 		  		 		 
 		   <div class="control-group">  
