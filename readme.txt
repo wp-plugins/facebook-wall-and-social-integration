@@ -11,7 +11,7 @@ Facebook wall and social integration allows you to display customized Facebook f
 
 == Description ==
 
-Facebook wall and social integration shows **facebook feed/wall posts of page/profile/group** in your website.You will only have to put facebook id of page or profile or group and access token in the plugin settings.There are a lot of settings to customize display including color settings.Graph API is used to show page/group/profile feed efficiently.
+Facebook wall and social integration shows **facebook feed/wall posts of page/group/profile** in your website.You will only have to put facebook id of page or profile or group and access token in the plugin settings.There are a lot of settings to customize display including font & color settings.Graph API is used to show page/group/profile feed efficiently.
 
 = Features =
 
@@ -21,7 +21,7 @@ Facebook wall and social integration shows **facebook feed/wall posts of page/pr
 * Have the ability to show guest entries too
 * Color settings for all posts
 * Cool editable css and loads fast
-* Use the shortcode options to set page/group id and number of posts
+* Use the shortcode options to set page/group id and others settings
 * Select from date formats to display date your own way
 * multiple feed display per page
 * It's responsive and adjusts within the width of container
@@ -63,7 +63,7 @@ non-pro version only shows status/textual posts of page/group/profile so there m
 
 = Why my facebook profile feed not displaying properly? =
 
-If you created facebook application after 30th April 2014 and using it's token then profile feed may not be displayed for new facebook Graph API.Actually Displaying feed for profile shows only public and selected posts because of various restrictions.So it's not good to show profile feed.
+If you created facebook application after 30th April 2014 and using it's token then profile feed may not be displayed for new facebook Graph API(you may require profile id in a different way, contact for that). Actually Displaying feed for profile shows only public and selected posts because of various restrictions.So it's not good to show profile feed.
 
 = Can I show photos and videos in my Facebook feed? =
 
@@ -80,6 +80,11 @@ For this feature please upgrade to the [Pro version of the plugin](http://extens
 = How do I embed the Custom Facebook Feed directly into a WordPress page template? =
 
 You can embed your Facebook feed directly into a template file by using the WordPress do_shortcode function: `do_shortcode('[mitsol_fbwall_feed_short_code]');`.
+
+= How do i use short code and inlcude attributes for specifying different settings for the feed display? =
+
+Read info about it at the bottom of plugin setting page in wp dashboard. From version 1.3 you can set all settings in shortcode, [click here](http://extensions.techhelpsource.com/fbwall_wordpress_shortcodes.htm "shortcode attributes") to see all shortcode attribute names.
+
 
 == Screenshots ==
 
