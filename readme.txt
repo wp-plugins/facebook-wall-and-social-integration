@@ -1,6 +1,6 @@
 === Facebook wall and social integration ===
 Contributors: mitsol
-Tags: facebook, feed, events, shortcode, social, status, posts, facebook wall, plugin
+Tags: facebook, facebook posts, facebook wall, facebook page, feed, events, shortcode, social, status, posts, facebook wall, plugin, custom, facebook group, social media, seo, responsive
 Requires at least: 3.1
 Tested up to: 3.9.2
 Stable tag: 1.3
@@ -9,27 +9,37 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Facebook wall and social integration allows you to display customized Facebook feed of any public Facebook page or group or profile.
 
-== Description ==
+== Description == 
+Facebook wall and social integration shows **facebook page/group/profile feed/wall posts** in your website.You will only have to put facebook id of page or group or profile and access token in the plugin settings. Graph API is used to get page/group/profile feed content from facebook efficiently. If you face any problems in running it just read [doc](http://extensions.techhelpsource.com/facebook_wall_documentation_wordpress.htm) & contact us.
 
-Facebook wall and social integration shows **facebook feed/wall posts of page/group/profile** in your website.You will only have to put facebook id of page or profile or group and access token in the plugin settings.There are a lot of settings to customize display including font & color settings.Graph API is used to show page/group/profile feed efficiently.
+It's easy to handle and not dependant on javascript. There are a lot of settings to customize display including font & color settings, showing guest entries, show/hide each individual items of post, set cache duration to cache FB content to database to retrieve content from database without making another Api request to facebook until cache duration expires, set date time zone to display post date according to your timezone, crawlable by search engines and it's responsive, others.
+
+A perfect display of your Facebook page/group/profile content in your business/personal websites, view customer reviews to know what our customer says. Post ideas about the plugin in [pro version website](http://extensions.techhelpsource.com/forum "pro version website forum") & [follow me](https://twitter.com/mridulcs "follow me") on twitter for update of changes.
 
 = Features =
 
-* Graph API usage for profile/page/group feeds
-* Manage height and width of wall posts
-* You can show number of posts to display from settings
+* **Graph API usage** for profile/page/group feeds
+* All you need to run is **facebook id and access token**
+* Manage height and width of feed display container
+* You can set **number of posts** to display
 * Have the ability to show guest entries too
-* Color settings for all posts
+* **Color settings** for post items
+* Set background color of wall display
 * Cool editable css and loads fast
-* Use the shortcode options to set page/group id and others settings
+* Use the shortcode to set different page/group id and others settings
+* All settings can be set via short code [atttributes](http://extensions.techhelpsource.com/fbwall_wordpress_shortcodes.htm "short code attributes")
 * Select from date formats to display date your own way
-* multiple feed display per page
-* It's responsive and adjusts within the width of container
-* Feed data can be cached in database to load fast
-* Show/hide individual items in post
-* others
+* Also select different **time zones** to display date according to your time zone
+* **Multiple feed display per page**
+* It's **responsive** and adjusts within the width of container
+* Feed data can be **cached** in database using wp transient api to load fast
+* Show/hide **individual items in post**
+* Write your own text for post link which opens the post in Facebook
+* Includes setting page tab to see if system requirements are met
+* Read **Faq** for embedding feed in template
+* Others & more required stunning features in pro version
 
-To display photo post, video post, link post, event post, choose type of posts, show/hide items in post, different picture sizes, the number of likes, all comments per post using ajax call, header bar and like button at top, language settings, scrolling plugin,responsiveness and more then [upgrade to the Pro version](http://extensions.techhelpsource.com/wordpress/facebook-wall-pro "facebook wall pro"). Try out the [Pro demo](http://wordpress.techhelpsource.com/facebook-wall-pro/ "facebook wall Demo").
+To display photo post, video post, link post, event post, choose type of posts, show/hide items in post, different picture sizes, the number of likes, all comments per post using ajax call, header bar and like button at top, language settings, scrolling plugin, responsiveness, make text urls & hashtags linkable and more features then [upgrade to the Pro version](http://extensions.techhelpsource.com/wordpress/facebook-wall-pro "facebook wall pro"). Try out the [Pro demo](http://wordpress.techhelpsource.com/facebook-wall-pro/ "facebook wall Demo").
 
 == Installation ==
 
@@ -77,7 +87,7 @@ Yes you can choose type of posts to display.For this feature please upgrade to t
 
 For this feature please upgrade to the [Pro version of the plugin](http://extensions.techhelpsource.com/wordpress/facebook-wall-pro "Facebook Wall Feed Pro"). From pro version 1.2 getting comments directly from facebook using ajax has been added.
 
-= How do I embed the Custom Facebook Feed directly into a WordPress page template? =
+= How do I embed the Facebook Feed directly into a WordPress page template? =
 
 You can embed your Facebook feed directly into a template file by using the WordPress do_shortcode function: `do_shortcode('[mitsol_fbwall_feed_short_code]');`.
 
