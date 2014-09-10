@@ -153,7 +153,7 @@ if($msfb_max==0){
 	$msfb_html_content_first .= '<div class="msfb-wall-box-first">';
 	$msfb_html_content_first .= '<img class="msfb-wall-avatar" src="'. Msfb_Wall_Get_Avatar_Url($msfb_fbid) .'" />';
 	$msfb_html_content_first .= '<div class="msfb-wall-data">';
-	$msfb_html_content_first .= '<span class="msfb-wall-message">Call to Facebook API failed or no records returned. Make sure system requirements are met(look for the tab in settings page), facebook id and access token(<a target="_blank" href="https://developers.facebook.com/tools/debug/">check here</a>) are right. Finally, make sure if there are some restrictions set in facebook page/group/profile settings comparing with other page/groups for which feed works.</span>';
+	$msfb_html_content_first .= '<span class="msfb-wall-message">Call to Facebook API failed or no records returned. Make sure system requirements are met(look for the tab in settings page), facebook id and access token(<a target="_blank" href="https://developers.facebook.com/tools/debug/">check here</a>) are right. Finally, make sure there are no restrictions set in facebook page/group/profile settings and compare with another page/group feed display to find the exact problem.</span>';
 	$msfb_html_content_first .= '</div>';
 	$msfb_html_content_first .= '</div>'; $error_flag=true;
 }   
