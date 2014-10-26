@@ -1,5 +1,5 @@
 <?php 
-/* facebook wall version 1.3 */ 
+/* facebook wall version 1.4 */ 
 // Example Use: [facebook_wall_and_social_integration_replace_com post_title="true" excerpt_length="true" categories="all" thumbnail="true" img_width="250" img_height="150" rows="2" columns="1" pages_number="2" template="amaz-columns.php"]
 function facebook_wall_and_social_integration_replace_scode($atts) { 
 	
@@ -279,7 +279,7 @@ $msfb_source_id = explode("_",$msfbData->data[0]->id); //if not define here, thi
 <?php if($re_facebookwidth!=""){ $fb_width=$re_facebookwidth; } ?>
 <div class="msfb-wall-main"> <div class="msfb-container"> <div class="msfb-row"> <div class="span_len<?php echo $fb_width; ?>">
 <div id="msfbmain-div<?php echo $rnd_id; ?>">
-<div id="msfb-content-main-<?php echo $rnd_id; ?>" class="scroll-content" style="overflow: auto;margin:7px 1px 2px 0;"><div class="msfb-wall"><!-- version1.3 --><?php echo $msfb_html_content_first; ?></div></div>  
+<div id="msfb-content-main-<?php echo $rnd_id; ?>" class="scroll-content" style="overflow: auto;margin:7px 1px 2px 0;"><div class="msfb-wall"><!-- version1.4 --><?php echo $msfb_html_content_first; ?></div></div>  
 </div> 
 </div></div></div></div>
  <?php  
@@ -348,57 +348,7 @@ function Msfb_Wall_Get_Graph_API_Data($url){
 	return $msfbJsonData;
 }		
 
-function facebook_wall_and_social_integration_activation()
-{ 
-if(!get_option('ms_fbwall_plugin_general_settings')) {
-	$ms_fbwall_plugin_general_settings = array(
-		'msfb_fbid' => 'wordpress',
-		'msfb_accesstoken' => '',
-		'msfb_facebookwidth' => '90',
-		'msfb_facebookheight' => '550',	
-        'msfb_guestentries' => 'enabled',				    		
-		'msfb_postnum' => '5',        		
-		'msfb_showborder' => 'enabled'																															
-		);
-	add_option( 'ms_fbwall_plugin_general_settings', $ms_fbwall_plugin_general_settings );
-}
-if(!get_option('ms_fbwall_plugin_postlayout_settings')) {
 
-	$ms_fbwall_plugin_postlayout_settings = array(
-	'msfb_showauthavatar' => 'enabled',
-	'msfb_showauthname' => 'enabled',
-	'msfb_showposttext' => 'enabled',   
-        'msfb_showdate' => 'enabled',
-        'msfb_dateformat' => 'nonus',
-        'msfb_timezone' => 'Europe/London',
-        'msfb_postlikebutton' => 'enabled',
-        'msfb_postlikebtntxt' => 'Like'        
-	);
-	add_option( 'ms_fbwall_plugin_postlayout_settings', $ms_fbwall_plugin_postlayout_settings );
-}
-
-if(!get_option('ms_fbwall_plugin_color_settings')) {
-	$ms_fbwall_plugin_color_settings = array(		
-		'msfb_backcolor' => '#ffffff',
-		'msfb_postbordercolor' => '#F0F0F0',
-		'msfb_postauthorcolor' => '#3B5998',		
-		'msfb_posttextcolor' => '#333333',			
-		'msfb_datecolor' => '#777',		
-		'msfb_likecommenttextcolor' => '#3B5998',				
-		);
-
-	add_option( 'ms_fbwall_plugin_color_settings', $ms_fbwall_plugin_color_settings );
-}    
-	
-}
-function facebook_wall_and_social_integration_deactivation()
-{
-   if (!current_user_can( 'activate_plugins' ))
-        return;
-   delete_option( 'ms_fbwall_plugin_general_settings' );
-   delete_option( 'ms_fbwall_plugin_postlayout_settings' );   
-   delete_option( 'ms_fbwall_plugin_color_settings' );   		  
-}
 
 
 
