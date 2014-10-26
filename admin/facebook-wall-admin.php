@@ -608,8 +608,8 @@ input[type="color"],.msmain_container
 <div class="row-fluid">
 <div class="well" style="color: navy">
 Please check <b>"System rquirements"</b> tab above to know if your server has required methods enabled to display the content of the facebook feed.Also if feed display<br/>
-not works, make sure facebook id and access token(<a target="_blank" href="https://developers.facebook.com/tools/debug/">check here</a>) are right. Finally, make sure if
-there are some restrictions set in facebook page/group/profile settings<br/> 
+not works, make sure facebook id and access token(<a target="_blank" href="https://developers.facebook.com/tools/debug/">check here</a>) are right. Finally, make sure 
+there are no restrictions set in facebook page/group/profile settings<br/> 
 comparing with other page/groups for which feed works.<br/><br/>Read instructions and identify errors if any in <a target="_blank" href="http://extensions.techhelpsource.com/facebook_wall_documentation_wordpress.htm">Documentation</a> 
 </div> 
 <div class="well">
@@ -633,3 +633,55 @@ To override settings, include setting attributes in short codes as follows - <st
  
  </div>
  <?php  }
+ 
+ function facebook_wall_and_social_integration_activation()
+ {
+ 	if(!get_option('ms_fbwall_plugin_general_settings')) {
+ 		$ms_fbwall_plugin_general_settings = array(
+ 				'msfb_fbid' => 'wordpress',
+ 				'msfb_accesstoken' => '',
+ 				'msfb_facebookwidth' => '90',
+ 				'msfb_facebookheight' => '550',
+ 				'msfb_guestentries' => 'enabled',
+ 				'msfb_postnum' => '5',
+ 				'msfb_showborder' => 'enabled'
+ 		);
+ 		add_option( 'ms_fbwall_plugin_general_settings', $ms_fbwall_plugin_general_settings );
+ 	}
+ 	if(!get_option('ms_fbwall_plugin_postlayout_settings')) {
+ 
+ 		$ms_fbwall_plugin_postlayout_settings = array(
+ 				'msfb_showauthavatar' => 'enabled',
+ 				'msfb_showauthname' => 'enabled',
+ 				'msfb_showposttext' => 'enabled',
+ 				'msfb_showdate' => 'enabled',
+ 				'msfb_dateformat' => 'nonus',
+ 				'msfb_timezone' => 'Europe/London',
+ 				'msfb_postlikebutton' => 'enabled',
+ 				'msfb_postlikebtntxt' => 'Like'
+ 		);
+ 		add_option( 'ms_fbwall_plugin_postlayout_settings', $ms_fbwall_plugin_postlayout_settings );
+ 	}
+ 
+ 	if(!get_option('ms_fbwall_plugin_color_settings')) {
+ 		$ms_fbwall_plugin_color_settings = array(
+ 				'msfb_backcolor' => '#ffffff',
+ 				'msfb_postbordercolor' => '#F0F0F0',
+ 				'msfb_postauthorcolor' => '#3B5998',
+ 				'msfb_posttextcolor' => '#333333',
+ 				'msfb_datecolor' => '#777',
+ 				'msfb_likecommenttextcolor' => '#3B5998',
+ 		);
+ 
+ 		add_option( 'ms_fbwall_plugin_color_settings', $ms_fbwall_plugin_color_settings );
+ 	}
+ 
+ }
+ function facebook_wall_and_social_integration_deactivation()
+ {
+ 	if (!current_user_can( 'activate_plugins' ))
+ 		return;
+ 	delete_option( 'ms_fbwall_plugin_general_settings' );
+ 	delete_option( 'ms_fbwall_plugin_postlayout_settings' );
+ 	delete_option( 'ms_fbwall_plugin_color_settings' );
+ }
