@@ -3,7 +3,7 @@ Contributors: mitsol
 Tags: Facebook, Facebook posts, Facebook wall, Facebook page, Feed, Events, Shortcode, Social, Status, Posts, Facebook wall, Plugin, Custom, Facebook group, Social media, Seo, Responsive 
 Requires at least: 3.1
 Tested up to: 4.0
-Stable tag: 1.3
+Stable tag: 1.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -117,3 +117,10 @@ Read info about it at the bottom of plugin setting page in wp dashboard. From ve
 * All settings now can be set in short code attributes 
 * embed youtube videos in feed display(pro)
 * other fixes
+= 1.4 =
+* added post filters : show posts which contain specified string in settings, also hide posts which contain that string
+* filter by post id is possible to show specific post only.
+* other minor fixes and improvements
+
+   
+
