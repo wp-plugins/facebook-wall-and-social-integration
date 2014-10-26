@@ -2,7 +2,7 @@
 /*
 Plugin Name: facebook wall and social integration
 Plugin URI: http://extensions.techhelpsource.com/wordpress/facebook-wall-pro/
-Description: Facebook feed of page/group/profile and social integration by mitsol(pro version)
+Description: Facebook feed of page/group/profile and social integration by mitsol(free version)
 Author: mitsol	
 Version: 1.4
 Author URI: http://extensions.techhelpsource.com/ 
