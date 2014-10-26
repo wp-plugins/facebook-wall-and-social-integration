@@ -270,7 +270,11 @@ $msfb_source_id = explode("_",$msfbData->data[0]->id); //if not define here, thi
 /* If we want to create more complex html code it's easier to capture the output buffer and return it */ 
  ob_start();  
  ?>
-<?php if(!defined('MSFBWALL_PLUGIN_ALREADY_LOADED')) { ?><link type="text/css" rel="stylesheet" href="<?php echo site_url(); ?>/wp-content/plugins/facebook-wall-and-social-integration/css/jquery.mitsol.fbookwall.css" /> <?php define('MSFBWALL_PLUGIN_ALREADY_LOADED', true); } ?>
+ 
+<?php global $ms_fbwall_main_style_1578;   
+if(!$ms_fbwall_main_style_1578){ ?>
+<link type="text/css" rel="stylesheet" href="<?php echo site_url(); ?>/wp-content/plugins/facebook-wall-and-social-integration/css/jquery.mitsol.fbookwall.css" />
+<?php $ms_fbwall_main_style_1578 = true; } ?>
  		
 <style type="text/css">      
  <?php echo $curmod_styles; ?>
