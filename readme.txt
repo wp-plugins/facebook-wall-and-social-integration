@@ -33,13 +33,13 @@ A perfect display of your Facebook page/group/profile content in your business/p
 * **Multiple feed display per page**
 * It's **responsive** and adjusts within the width of container
 * Feed data can be **cached** in database using wp transient api to load fast
-* Show/hide **individual items in post**
+* Show/hide **individual items in post** 
 * Write your own text for post link which opens the post in Facebook
 * Includes setting page tab to see if system requirements are met
 * Read **Faq** for embedding feed in template
 * Others & more required stunning features in pro version
 
-To display photo post, video post, link post, event post, choose type of posts, show/hide items in post, different picture sizes, the number of likes, all comments per post using ajax call, header bar and like button at top, language settings, scrolling plugin, responsiveness, make text urls & hashtags linkable and more features then [upgrade to the Pro version](http://extensions.techhelpsource.com/wordpress/facebook-wall-pro "facebook wall pro"). Try out the [Pro demo](http://wordpress.techhelpsource.com/facebook-wall-pro/ "facebook wall Demo").
+To display photo post, video post, link post, event post, choose type of posts, show/hide items in post, different picture sizes, the number of likes, all comments per post using ajax call, filter posts by any custom strings and post id, header bar and like button at top, language settings, scrolling plugin, responsiveness, make text urls & hashtags linkable and more features then [upgrade to the Pro version](http://extensions.techhelpsource.com/wordpress/facebook-wall-pro "facebook wall pro"). Try out the [Pro demo](http://wordpress.techhelpsource.com/facebook-wall-pro/ "facebook wall Demo").
 
 == Installation ==
 
