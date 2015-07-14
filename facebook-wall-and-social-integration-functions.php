@@ -100,7 +100,8 @@ $msfb_type=""; $msfb_source_id="";
 //feed or posts
 $msfb_type = ($msfb_guestentries) ? 'feed' : 'posts'; //if showGuest false = posts
 //graph api url
-$msfb_posts_url = 'https://graph.facebook.com/'. $msfb_fbid.'/' . $msfb_type . '?access_token='.$msfb_accesstoken.'&limit='. $msfb_postnum;
+////fields=id,from,message,story,picture,link,icon,actions,type,status_type,created_time
+$msfb_posts_url = 'https://graph.facebook.com/'. $msfb_fbid.'/' . $msfb_type . '?fields=id,from,message,story,link,icon,actions,type,status_type,created_time&access_token='.$msfb_accesstoken.'&limit='. $msfb_postnum;
 //set time zone for date calculation //check if empty function is appropriate when string is empty check done
 date_default_timezone_set($msfb_timezone);
 
