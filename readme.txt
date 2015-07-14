@@ -3,7 +3,7 @@ Contributors: mitsol
 Tags: Facebook, Facebook posts, Facebook wall, Facebook page, Feed, Events, Shortcode, Social, Status, Posts, Facebook wall, Plugin, Custom, Facebook group, Social media, Seo, Responsive 
 Requires at least: 3.1
 Tested up to: 4.2 
-Stable tag: 1.4
+Stable tag: 1.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -121,6 +121,8 @@ Read info about it at the bottom of plugin setting page in wp dashboard. From ve
 * added post filters : show posts which contain specified string in settings, also hide posts which contain that string
 * filter by post id is possible to show specific post only.
 * other minor fixes and improvements
+= 1.5 =
+* Plugin is now compatible with recent API version 2.4 release from facebook. Now access token of FB application created after 8th july will work too.  
 
    
 
