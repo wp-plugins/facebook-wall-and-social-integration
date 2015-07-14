@@ -1,5 +1,5 @@
 <?php 
-/* facebook wall version 1.4 */ 
+/* facebook wall version 1.5 */ 
 // Example Use: [facebook_wall_and_social_integration_replace_com post_title="true" excerpt_length="true" categories="all" thumbnail="true" img_width="250" img_height="150" rows="2" columns="1" pages_number="2" template="amaz-columns.php"]
 function facebook_wall_and_social_integration_replace_scode($atts) { 
 	
@@ -284,7 +284,7 @@ if(!$ms_fbwall_main_style_1578){ ?>
 <?php if($re_facebookwidth!=""){ $fb_width=$re_facebookwidth; } ?>
 <div class="msfb-wall-main"> <div class="msfb-container"> <div class="msfb-row"> <div class="span_len<?php echo $fb_width; ?>">
 <div id="msfbmain-div<?php echo $rnd_id; ?>">
-<div id="msfb-content-main-<?php echo $rnd_id; ?>" class="scroll-content" style="overflow: auto;margin:7px 1px 2px 0;"><div class="msfb-wall"><!-- version1.4 --><?php echo $msfb_html_content_first; ?></div></div>  
+<div id="msfb-content-main-<?php echo $rnd_id; ?>" class="scroll-content" style="overflow: auto;margin:7px 1px 2px 0;"><div class="msfb-wall"><!-- version1.5 --><?php echo $msfb_html_content_first; ?></div></div>  
 </div> 
 </div></div></div></div>
  <?php  
