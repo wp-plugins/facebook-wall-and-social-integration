@@ -3,7 +3,7 @@ Contributors: mitsol
 Tags: Facebook, Facebook posts, Facebook wall, Facebook page, Feed, Events, Shortcode, Social, Status, Posts, Facebook wall, Plugin, Custom, Facebook group, Social media, Seo, Responsive 
 Requires at least: 3.1
 Tested up to: 4.2 
-Stable tag: 1.5
+Stable tag: 1.5 
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,7 +14,7 @@ Facebook wall and social integration shows **facebook page/group/profile feed/wa
 
 It's easy to handle and not dependant on javascript. There are a lot of settings to customize display including font & color settings, showing guest entries, show/hide each individual items of post, set cache duration to cache FB content to database to retrieve content from database without making another Api request to facebook until cache duration expires, set date time zone to display post date according to your timezone, crawlable by search engines and it's responsive, others.
 
-A perfect display of your Facebook page/group/profile content in your business/personal websites, view customer reviews to know what our customer says. Post ideas about the plugin in [pro version website](http://extensions.techhelpsource.com/forum "pro version website forum") & [follow me](https://twitter.com/mridulcs "follow me") on twitter for update of changes.
+A perfect display of your Facebook page/group/profile content in your business/personal websites, view customer reviews to know what our customer says. Post ideas about the plugin in [pro version website](http://extensions.techhelpsource.com/forum "pro version website forum") & [follow me](https://twitter.com/mitsol12 "follow me") on twitter for update of changes.
 
 = Features =
 
